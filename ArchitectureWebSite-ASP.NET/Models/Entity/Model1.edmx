@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ArchitectureDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="AboutID" />
+          </Key>
+          <Property Name="AboutID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BigTitle" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubTitle" Type="nvarchar" MaxLength="100" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="OurStory" Type="nvarchar" MaxLength="150" />
+          <Property Name="OurGoal" Type="nvarchar" MaxLength="150" />
+          <Property Name="BigImage" Type="nvarchar" MaxLength="100" />
+          <Property Name="ShortImage" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="BlogID" />
+          </Key>
+          <Property Name="BlogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Author" Type="nvarchar" MaxLength="100" />
+          <Property Name="DateBlog" Type="datetime" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" />
+          <Property Name="Content" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="DateContact" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DesignAgency">
+          <Key>
+            <PropertyRef Name="DesignAgencyID" />
+          </Key>
+          <Property Name="DesignAgencyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Creativity" Type="nvarchar" MaxLength="100" />
+          <Property Name="Management" Type="nvarchar" MaxLength="100" />
+          <Property Name="SpacePlan" Type="nvarchar" MaxLength="100" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Portfolio">
+          <Key>
+            <PropertyRef Name="PortfolioID" />
+          </Key>
+          <Property Name="PortfolioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProjectType" Type="nvarchar" MaxLength="100" />
+          <Property Name="CustomerSupport" Type="nvarchar" MaxLength="100" />
+          <Property Name="Clients" Type="nvarchar" MaxLength="100" />
+          <Property Name="Location" Type="nvarchar" MaxLength="100" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="DatePortfolio" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Services">
+          <Key>
+            <PropertyRef Name="ServicesID" />
+          </Key>
+          <Property Name="ServicesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="ShortContent" Type="nvarchar(max)" />
+          <Property Name="WeTakeTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerSupport" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="DateService" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SiteSettings">
+          <Key>
+            <PropertyRef Name="SiteSettingsID" />
+          </Key>
+          <Property Name="SiteSettingsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FacebookLink" Type="nvarchar" MaxLength="100" />
+          <Property Name="LinkedinLink" Type="nvarchar" MaxLength="100" />
+          <Property Name="InstagramLink" Type="nvarchar" MaxLength="100" />
+          <Property Name="TwitterLink" Type="nvarchar" MaxLength="100" />
+          <Property Name="YoutubeLink" Type="nvarchar" MaxLength="100" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="100" />
+          <Property Name="CompanyNumber" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Map" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Slider">
+          <Key>
+            <PropertyRef Name="SliderID" />
+          </Key>
+          <Property Name="SliderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BigTitle" Type="nvarchar" MaxLength="100" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Statistic">
+          <Key>
+            <PropertyRef Name="StatisticID" />
+          </Key>
+          <Property Name="StatisticID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Data" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Name="TeamID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Job" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" />
+          <Property Name="DateTeam" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Testimonials">
+          <Key>
+            <PropertyRef Name="TestimonialsID" />
+          </Key>
+          <Property Name="TestimonialsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="100" />
+          <Property Name="Location" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="DateTestimonial" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="ArchitectureDbModelStoreContainer">
+          <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DesignAgency" EntityType="Self.DesignAgency" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Portfolio" EntityType="Self.Portfolio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SiteSettings" EntityType="Self.SiteSettings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Statistic" EntityType="Self.Statistic" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Testimonials" EntityType="Self.Testimonials" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ArchitectureDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="AboutID" />
+          </Key>
+          <Property Name="AboutID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BigTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OurStory" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="OurGoal" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="BigImage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ShortImage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="BlogID" />
+          </Key>
+          <Property Name="BlogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DateBlog" Type="DateTime" Precision="3" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateContact" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="DesignAgency">
+          <Key>
+            <PropertyRef Name="DesignAgencyID" />
+          </Key>
+          <Property Name="DesignAgencyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Creativity" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Management" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SpacePlan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Portfolio">
+          <Key>
+            <PropertyRef Name="PortfolioID" />
+          </Key>
+          <Property Name="PortfolioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerSupport" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Clients" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DatePortfolio" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Services">
+          <Key>
+            <PropertyRef Name="ServicesID" />
+          </Key>
+          <Property Name="ServicesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ShortContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WeTakeTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerSupport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateService" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SiteSettings">
+          <Key>
+            <PropertyRef Name="SiteSettingsID" />
+          </Key>
+          <Property Name="SiteSettingsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FacebookLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LinkedinLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="InstagramLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TwitterLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="YoutubeLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Map" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Slider">
+          <Key>
+            <PropertyRef Name="SliderID" />
+          </Key>
+          <Property Name="SliderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BigTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Statistic">
+          <Key>
+            <PropertyRef Name="StatisticID" />
+          </Key>
+          <Property Name="StatisticID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Name="TeamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DateTeam" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Testimonials">
+          <Key>
+            <PropertyRef Name="TestimonialsID" />
+          </Key>
+          <Property Name="TestimonialsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Comment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DateTestimonial" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="ArchitectureDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="About" EntityType="Self.About" />
+          <EntitySet Name="Blog" EntityType="Self.Blog" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" />
+          <EntitySet Name="DesignAgency" EntityType="Self.DesignAgency" />
+          <EntitySet Name="Portfolio" EntityType="Self.Portfolio" />
+          <EntitySet Name="Services" EntityType="Self.Services" />
+          <EntitySet Name="SiteSettings" EntityType="Self.SiteSettings" />
+          <EntitySet Name="Slider" EntityType="Self.Slider" />
+          <EntitySet Name="Statistic" EntityType="Self.Statistic" />
+          <EntitySet Name="Team" EntityType="Self.Team" />
+          <EntitySet Name="Testimonials" EntityType="Self.Testimonials" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ArchitectureDbModelStoreContainer" CdmEntityContainer="ArchitectureDbEntities">
+          <EntitySetMapping Name="About">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.About">
+              <MappingFragment StoreEntitySet="About">
+                <ScalarProperty Name="AboutID" ColumnName="AboutID" />
+                <ScalarProperty Name="BigTitle" ColumnName="BigTitle" />
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="OurStory" ColumnName="OurStory" />
+                <ScalarProperty Name="OurGoal" ColumnName="OurGoal" />
+                <ScalarProperty Name="BigImage" ColumnName="BigImage" />
+                <ScalarProperty Name="ShortImage" ColumnName="ShortImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Blog">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.Blog">
+              <MappingFragment StoreEntitySet="Blog">
+                <ScalarProperty Name="BlogID" ColumnName="BlogID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="DateBlog" ColumnName="DateBlog" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contact">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="DateContact" ColumnName="DateContact" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DesignAgency">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.DesignAgency">
+              <MappingFragment StoreEntitySet="DesignAgency">
+                <ScalarProperty Name="DesignAgencyID" ColumnName="DesignAgencyID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Creativity" ColumnName="Creativity" />
+                <ScalarProperty Name="Management" ColumnName="Management" />
+                <ScalarProperty Name="SpacePlan" ColumnName="SpacePlan" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Portfolio">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.Portfolio">
+              <MappingFragment StoreEntitySet="Portfolio">
+                <ScalarProperty Name="PortfolioID" ColumnName="PortfolioID" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ProjectType" ColumnName="ProjectType" />
+                <ScalarProperty Name="CustomerSupport" ColumnName="CustomerSupport" />
+                <ScalarProperty Name="Clients" ColumnName="Clients" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="DatePortfolio" ColumnName="DatePortfolio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.Services">
+              <MappingFragment StoreEntitySet="Services">
+                <ScalarProperty Name="ServicesID" ColumnName="ServicesID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ShortContent" ColumnName="ShortContent" />
+                <ScalarProperty Name="WeTakeTime" ColumnName="WeTakeTime" />
+                <ScalarProperty Name="CustomerSupport" ColumnName="CustomerSupport" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="DateService" ColumnName="DateService" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SiteSettings">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.SiteSettings">
+              <MappingFragment StoreEntitySet="SiteSettings">
+                <ScalarProperty Name="SiteSettingsID" ColumnName="SiteSettingsID" />
+                <ScalarProperty Name="FacebookLink" ColumnName="FacebookLink" />
+                <ScalarProperty Name="LinkedinLink" ColumnName="LinkedinLink" />
+                <ScalarProperty Name="InstagramLink" ColumnName="InstagramLink" />
+                <ScalarProperty Name="TwitterLink" ColumnName="TwitterLink" />
+                <ScalarProperty Name="YoutubeLink" ColumnName="YoutubeLink" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="CompanyNumber" ColumnName="CompanyNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Map" ColumnName="Map" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Slider">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.Slider">
+              <MappingFragment StoreEntitySet="Slider">
+                <ScalarProperty Name="SliderID" ColumnName="SliderID" />
+                <ScalarProperty Name="BigTitle" ColumnName="BigTitle" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Statistic">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.Statistic">
+              <MappingFragment StoreEntitySet="Statistic">
+                <ScalarProperty Name="StatisticID" ColumnName="StatisticID" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Team">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.Team">
+              <MappingFragment StoreEntitySet="Team">
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Job" ColumnName="Job" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="DateTeam" ColumnName="DateTeam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Testimonials">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.Testimonials">
+              <MappingFragment StoreEntitySet="Testimonials">
+                <ScalarProperty Name="TestimonialsID" ColumnName="TestimonialsID" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DateTestimonial" ColumnName="DateTestimonial" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

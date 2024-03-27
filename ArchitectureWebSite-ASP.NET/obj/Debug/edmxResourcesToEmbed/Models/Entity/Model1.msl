@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ArchitectureDbModelStoreContainer" CdmEntityContainer="ArchitectureDbEntities">
+    <EntitySetMapping Name="About">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.About">
+        <MappingFragment StoreEntitySet="About">
+          <ScalarProperty Name="AboutID" ColumnName="AboutID" />
+          <ScalarProperty Name="BigTitle" ColumnName="BigTitle" />
+          <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="OurStory" ColumnName="OurStory" />
+          <ScalarProperty Name="OurGoal" ColumnName="OurGoal" />
+          <ScalarProperty Name="BigImage" ColumnName="BigImage" />
+          <ScalarProperty Name="ShortImage" ColumnName="ShortImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blog">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.Blog">
+        <MappingFragment StoreEntitySet="Blog">
+          <ScalarProperty Name="BlogID" ColumnName="BlogID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="DateBlog" ColumnName="DateBlog" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="DateContact" ColumnName="DateContact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesignAgency">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.DesignAgency">
+        <MappingFragment StoreEntitySet="DesignAgency">
+          <ScalarProperty Name="DesignAgencyID" ColumnName="DesignAgencyID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Creativity" ColumnName="Creativity" />
+          <ScalarProperty Name="Management" ColumnName="Management" />
+          <ScalarProperty Name="SpacePlan" ColumnName="SpacePlan" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Portfolio">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.Portfolio">
+        <MappingFragment StoreEntitySet="Portfolio">
+          <ScalarProperty Name="PortfolioID" ColumnName="PortfolioID" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ProjectType" ColumnName="ProjectType" />
+          <ScalarProperty Name="CustomerSupport" ColumnName="CustomerSupport" />
+          <ScalarProperty Name="Clients" ColumnName="Clients" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="DatePortfolio" ColumnName="DatePortfolio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.Services">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="ServicesID" ColumnName="ServicesID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ShortContent" ColumnName="ShortContent" />
+          <ScalarProperty Name="WeTakeTime" ColumnName="WeTakeTime" />
+          <ScalarProperty Name="CustomerSupport" ColumnName="CustomerSupport" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="DateService" ColumnName="DateService" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteSettings">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.SiteSettings">
+        <MappingFragment StoreEntitySet="SiteSettings">
+          <ScalarProperty Name="SiteSettingsID" ColumnName="SiteSettingsID" />
+          <ScalarProperty Name="FacebookLink" ColumnName="FacebookLink" />
+          <ScalarProperty Name="LinkedinLink" ColumnName="LinkedinLink" />
+          <ScalarProperty Name="InstagramLink" ColumnName="InstagramLink" />
+          <ScalarProperty Name="TwitterLink" ColumnName="TwitterLink" />
+          <ScalarProperty Name="YoutubeLink" ColumnName="YoutubeLink" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="CompanyNumber" ColumnName="CompanyNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Map" ColumnName="Map" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Slider">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.Slider">
+        <MappingFragment StoreEntitySet="Slider">
+          <ScalarProperty Name="SliderID" ColumnName="SliderID" />
+          <ScalarProperty Name="BigTitle" ColumnName="BigTitle" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statistic">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.Statistic">
+        <MappingFragment StoreEntitySet="Statistic">
+          <ScalarProperty Name="StatisticID" ColumnName="StatisticID" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Team">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="DateTeam" ColumnName="DateTeam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Testimonials">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.Testimonials">
+        <MappingFragment StoreEntitySet="Testimonials">
+          <ScalarProperty Name="TestimonialsID" ColumnName="TestimonialsID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DateTestimonial" ColumnName="DateTestimonial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

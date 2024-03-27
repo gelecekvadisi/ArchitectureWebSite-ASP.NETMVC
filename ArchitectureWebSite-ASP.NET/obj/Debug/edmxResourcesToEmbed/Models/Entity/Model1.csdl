@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArchitectureDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="About">
+    <Key>
+      <PropertyRef Name="AboutID" />
+    </Key>
+    <Property Name="AboutID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BigTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OurStory" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="OurGoal" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="BigImage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ShortImage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="BlogID" />
+    </Key>
+    <Property Name="BlogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateBlog" Type="DateTime" Precision="3" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateContact" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="DesignAgency">
+    <Key>
+      <PropertyRef Name="DesignAgencyID" />
+    </Key>
+    <Property Name="DesignAgencyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Creativity" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Management" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SpacePlan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Portfolio">
+    <Key>
+      <PropertyRef Name="PortfolioID" />
+    </Key>
+    <Property Name="PortfolioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerSupport" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Clients" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DatePortfolio" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="ServicesID" />
+    </Key>
+    <Property Name="ServicesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ShortContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WeTakeTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerSupport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateService" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SiteSettings">
+    <Key>
+      <PropertyRef Name="SiteSettingsID" />
+    </Key>
+    <Property Name="SiteSettingsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FacebookLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LinkedinLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InstagramLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TwitterLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="YoutubeLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Map" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Slider">
+    <Key>
+      <PropertyRef Name="SliderID" />
+    </Key>
+    <Property Name="SliderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BigTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Statistic">
+    <Key>
+      <PropertyRef Name="StatisticID" />
+    </Key>
+    <Property Name="StatisticID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Data" Type="Int32" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="TeamID" />
+    </Key>
+    <Property Name="TeamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateTeam" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Testimonials">
+    <Key>
+      <PropertyRef Name="TestimonialsID" />
+    </Key>
+    <Property Name="TestimonialsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Comment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateTestimonial" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="ArchitectureDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="About" EntityType="Self.About" />
+    <EntitySet Name="Blog" EntityType="Self.Blog" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" />
+    <EntitySet Name="DesignAgency" EntityType="Self.DesignAgency" />
+    <EntitySet Name="Portfolio" EntityType="Self.Portfolio" />
+    <EntitySet Name="Services" EntityType="Self.Services" />
+    <EntitySet Name="SiteSettings" EntityType="Self.SiteSettings" />
+    <EntitySet Name="Slider" EntityType="Self.Slider" />
+    <EntitySet Name="Statistic" EntityType="Self.Statistic" />
+    <EntitySet Name="Team" EntityType="Self.Team" />
+    <EntitySet Name="Testimonials" EntityType="Self.Testimonials" />
+  </EntityContainer>
+</Schema>
