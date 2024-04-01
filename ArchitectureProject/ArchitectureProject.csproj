@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ArchitectureProject</RootNamespace>
+    <AssemblyName>ArchitectureProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44320</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AnaLayoutController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\About.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Blog.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Contact.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\DesignAgency.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Portfolio.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Services.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SiteSettings.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Slider.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Statistic.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Team.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Testimonials.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="archite\archite documentation\css\bootstrap.css" />
+    <Content Include="archite\archite documentation\css\font-awesome.css" />
+    <Content Include="archite\archite documentation\css\scrollbar.css" />
+    <Content Include="archite\archite documentation\css\style.css" />
+    <Content Include="archite\archite documentation\fonts\fontawesome-webfont.svg" />
+    <Content Include="archite\archite documentation\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="archite\archite documentation\images\api-image.jpg" />
+    <Content Include="archite\archite documentation\images\api-key.jpg" />
+    <Content Include="archite\archite documentation\images\color-scheme.png" />
+    <Content Include="archite\archite documentation\images\colorDoc.png" />
+    <Content Include="archite\archite documentation\images\countdown-timer.jpg" />
+    <Content Include="archite\archite documentation\images\Logo.png" />
+    <Content Include="archite\archite documentation\images\logo.svg" />
+    <Content Include="archite\archite documentation\images\LogoTwo.png" />
+    <Content Include="archite\archite documentation\images\mail-settings.jpg" />
+    <Content Include="archite\archite documentation\images\map-settings.jpg" />
+    <Content Include="archite\archite documentation\images\map.png" />
+    <Content Include="archite\archite documentation\index.html" />
+    <Content Include="archite\archite documentation\js\bootstrap.min.js" />
+    <Content Include="archite\archite documentation\js\jquery.js" />
+    <Content Include="archite\archite documentation\js\jquery.nav.js" />
+    <Content Include="archite\archite documentation\js\jquery.scrollTo.js" />
+    <Content Include="archite\archite documentation\js\respond.js" />
+    <Content Include="archite\archite documentation\js\script.js" />
+    <Content Include="archite\archite documentation\js\scrollbar.js" />
+    <Content Include="archite\architetemplate\about.html" />
+    <Content Include="archite\architetemplate\blog.html" />
+    <Content Include="archite\architetemplate\blogDetails.html" />
+    <Content Include="archite\architetemplate\contact.html" />
+    <Content Include="archite\architetemplate\css\all.min.css" />
+    <Content Include="archite\architetemplate\css\aos.css" />
+    <Content Include="archite\architetemplate\css\bootstrap.min.css" />
+    <Content Include="archite\architetemplate\css\jquery.animatedheadline.css" />
+    <Content Include="archite\architetemplate\css\modal-video.min.css" />
+    <Content Include="archite\architetemplate\css\normalize.css" />
+    <Content Include="archite\architetemplate\css\owl.carousel.css" />
+    <Content Include="archite\architetemplate\css\owl.theme.default.min.css" />
+    <Content Include="archite\architetemplate\css\responsive.css" />
+    <Content Include="archite\architetemplate\css\style.css" />
+    <Content Include="archite\architetemplate\img\aboutOne.jpg" />
+    <Content Include="archite\architetemplate\img\aboutOneShape.png" />
+    <Content Include="archite\architetemplate\img\aboutOneSmall.jpg" />
+    <Content Include="archite\architetemplate\img\authorOne.jpg" />
+    <Content Include="archite\architetemplate\img\bannerOneBg.jpg" />
+    <Content Include="archite\architetemplate\img\bannerThreeBg.jpg" />
+    <Content Include="archite\architetemplate\img\bannerTwoBg.jpg" />
+    <Content Include="archite\architetemplate\img\blogDetailsFeatured.jpg" />
+    <Content Include="archite\architetemplate\img\blogDetailsFour.jpg" />
+    <Content Include="archite\architetemplate\img\blogDetailsOne.jpg" />
+    <Content Include="archite\architetemplate\img\blogDetailsThree.jpg" />
+    <Content Include="archite\architetemplate\img\blogDetailsTwo.jpg" />
+    <Content Include="archite\architetemplate\img\blogFeaturedFour.jpg" />
+    <Content Include="archite\architetemplate\img\blogFeaturedOne.jpg" />
+    <Content Include="archite\architetemplate\img\blogFeaturedThree.jpg" />
+    <Content Include="archite\architetemplate\img\blogFeaturedTwo.jpg" />
+    <Content Include="archite\architetemplate\img\blogOne.jpg" />
+    <Content Include="archite\architetemplate\img\blogThree.jpg" />
+    <Content Include="archite\architetemplate\img\blogTwo.jpg" />
+    <Content Include="archite\architetemplate\img\detailsImgFour.jpg" />
+    <Content Include="archite\architetemplate\img\detailsImgThree.jpg" />
+    <Content Include="archite\architetemplate\img\experienceOneImg.jpg" />
+    <Content Include="archite\architetemplate\img\favicon.ico" />
+    <Content Include="archite\architetemplate\img\featuresVideoBg.png" />
+    <Content Include="archite\architetemplate\img\homeThreeProjectFour.jpg" />
+    <Content Include="archite\architetemplate\img\homeThreeProjectOne.jpg" />
+    <Content Include="archite\architetemplate\img\homeThreeProjectThree.jpg" />
+    <Content Include="archite\architetemplate\img\homeThreeProjectTwo.jpg" />
+    <Content Include="archite\architetemplate\img\innerPageBannerBg.jpg" />
+    <Content Include="archite\architetemplate\img\introVideoBg.jpg" />
+    <Content Include="archite\architetemplate\img\Logo.png" />
+    <Content Include="archite\architetemplate\img\LogoTwo.png" />
+    <Content Include="archite\architetemplate\img\MenuToggleIcon.png" />
+    <Content Include="archite\architetemplate\img\menuToggleIvonTwo.png" />
+    <Content Include="archite\architetemplate\img\phoneIcon.png" />
+    <Content Include="archite\architetemplate\img\playIconWhite.png" />
+    <Content Include="archite\architetemplate\img\portfolioDetails.jpg" />
+    <Content Include="archite\architetemplate\img\projectsFour.jpg" />
+    <Content Include="archite\architetemplate\img\projectsOne.jpg" />
+    <Content Include="archite\architetemplate\img\projectsSix.jpg" />
+    <Content Include="archite\architetemplate\img\projectsThree.jpg" />
+    <Content Include="archite\architetemplate\img\projectsTwo.jpg" />
+    <Content Include="archite\architetemplate\img\quoteIcon.png" />
+    <Content Include="archite\architetemplate\img\recentBlogFour.jpg" />
+    <Content Include="archite\architetemplate\img\recentBlogOne.jpg" />
+    <Content Include="archite\architetemplate\img\recentBlogThree.jpg" />
+    <Content Include="archite\architetemplate\img\recentBlogTwo.jpg" />
+    <Content Include="archite\architetemplate\img\serviceBgFive.jpg" />
+    <Content Include="archite\architetemplate\img\serviceBgFour.jpg" />
+    <Content Include="archite\architetemplate\img\serviceBgOne.jpg" />
+    <Content Include="archite\architetemplate\img\serviceBgSix.jpg" />
+    <Content Include="archite\architetemplate\img\serviceBgThree.jpg" />
+    <Content Include="archite\architetemplate\img\serviceBgTwo.jpg" />
+    <Content Include="archite\architetemplate\img\serviceDetailsFAQ.jpg" />
+    <Content Include="archite\architetemplate\img\serviceDetailsImg.jpg" />
+    <Content Include="archite\architetemplate\img\serviceExtra.jpg" />
+    <Content Include="archite\architetemplate\img\serviceFive.png" />
+    <Content Include="archite\architetemplate\img\serviceFour.png" />
+    <Content Include="archite\architetemplate\img\serviceSix.png" />
+    <Content Include="archite\architetemplate\img\teamDetailsImg.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberEight.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberEleven.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberFive.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberFour.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberNine.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberOne.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberSeven.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberSix.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberTen.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberThree.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberTwelve.jpg" />
+    <Content Include="archite\architetemplate\img\teamMemberTwo.jpg" />
+    <Content Include="archite\architetemplate\img\testimonialIconFive.jpg" />
+    <Content Include="archite\architetemplate\img\testimonialIconFour.jpg" />
+    <Content Include="archite\architetemplate\img\testimonialIconOne.jpg" />
+    <Content Include="archite\architetemplate\img\testimonialIconThree.jpg" />
+    <Content Include="archite\architetemplate\img\testimonialIconTwo.jpg" />
+    <Content Include="archite\architetemplate\img\videoPlay.png" />
+    <Content Include="archite\architetemplate\img\whyChooseImg.jpg" />
+    <Content Include="archite\architetemplate\img\whyChooseTwo.jpg" />
+    <Content Include="archite\architetemplate\img\workTogetherBg.jpg" />
+    <Content Include="archite\architetemplate\index.html" />
+    <Content Include="archite\architetemplate\index2.html" />
+    <Content Include="archite\architetemplate\index3.html" />
+    <Content Include="archite\architetemplate\js\all.min.js" />
+    <Content Include="archite\architetemplate\js\aos.js" />
+    <Content Include="archite\architetemplate\js\bootstrap.min.js" />
+    <Content Include="archite\architetemplate\js\gsap.min.js" />
+    <Content Include="archite\architetemplate\js\jquery-3.6.4.min.js" />
+    <Content Include="archite\architetemplate\js\jquery-modal-video.min.js" />
+    <Content Include="archite\architetemplate\js\jquery.animatedheadline.min.js" />
+    <Content Include="archite\architetemplate\js\jquery.counterup.min.js" />
+    <Content Include="archite\architetemplate\js\jquery.preloader.min.js" />
+    <Content Include="archite\architetemplate\js\jquery.viewportchecker.min.js" />
+    <Content Include="archite\architetemplate\js\jquery.waypoints.min.js" />
+    <Content Include="archite\architetemplate\js\main.js" />
+    <Content Include="archite\architetemplate\js\owl.carousel.min.js" />
+    <Content Include="archite\architetemplate\js\ScrollSmoother.min.js" />
+    <Content Include="archite\architetemplate\js\ScrollToPlugin.min.js" />
+    <Content Include="archite\architetemplate\js\ScrollTrigger.min.js" />
+    <Content Include="archite\architetemplate\js\SplitText.min.js" />
+    <Content Include="archite\architetemplate\js\swiper.min.js" />
+    <Content Include="archite\architetemplate\js\textyle.min.js" />
+    <Content Include="archite\architetemplate\portfolio.html" />
+    <Content Include="archite\architetemplate\portfolioDetails.html" />
+    <Content Include="archite\architetemplate\services.html" />
+    <Content Include="archite\architetemplate\servicesDetails.html" />
+    <Content Include="archite\architetemplate\team.html" />
+    <Content Include="archite\architetemplate\teamDetails.html" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\Entity\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Entity\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Entity\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Entity\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="archite\archite documentation\fonts\fontawesome-webfont.eot" />
+    <Content Include="archite\archite documentation\fonts\fontawesome-webfont.ttf" />
+    <Content Include="archite\archite documentation\fonts\fontawesome-webfont.woff" />
+    <Content Include="archite\archite documentation\fonts\fontawesome-webfont.woff2" />
+    <Content Include="archite\archite documentation\fonts\FontAwesome.otf" />
+    <Content Include="archite\archite documentation\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="archite\archite documentation\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="archite\archite documentation\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="archite\archite documentation\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="archite\architetemplate\webfonts\fa-brands-400.ttf" />
+    <Content Include="archite\architetemplate\webfonts\fa-brands-400.woff2" />
+    <Content Include="archite\architetemplate\webfonts\fa-regular-400.ttf" />
+    <Content Include="archite\architetemplate\webfonts\fa-regular-400.woff2" />
+    <Content Include="archite\architetemplate\webfonts\fa-solid-900.ttf" />
+    <Content Include="archite\architetemplate\webfonts\fa-solid-900.woff2" />
+    <Content Include="archite\architetemplate\webfonts\fa-v4compatibility.ttf" />
+    <Content Include="archite\architetemplate\webfonts\fa-v4compatibility.woff2" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_AnaLayout.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\Banner.cshtml" />
+    <Content Include="Views\Default\AboutUs.cshtml" />
+    <Content Include="Views\Default\CountEmployee.cshtml" />
+    <Content Include="Views\Default\Services.cshtml" />
+    <Content Include="Views\Default\Project.cshtml" />
+    <Content Include="Views\Default\Features.cshtml" />
+    <Content Include="Views\Default\Testimonials.cshtml" />
+    <Content Include="Views\Default\Teams.cshtml" />
+    <Content Include="Views\AnaLayout\HeadPartial.cshtml" />
+    <Content Include="Views\AnaLayout\MenubarPartial.cshtml" />
+    <Content Include="Views\AnaLayout\FooterPartial.cshtml" />
+    <Content Include="Views\AnaLayout\ScriptPartial.cshtml" />
+    <Content Include="Views\AnaLayout\ScrollUpPartial.cshtml" />
+    <Content Include="Views\AnaLayout\PlaceholderPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="archite\archite documentation\images\background\" />
+    <Folder Include="archite\archite documentation\images\icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49803</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44320/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="72da5fa48c3940548110e45b9f01343c" Name="Diagram1">
+        <EntityTypeShape EntityType="ArchitectureDbModel.About" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchitectureDbModel.Blog" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchitectureDbModel.Contact" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchitectureDbModel.DesignAgency" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchitectureDbModel.Portfolio" Width="1.5" PointX="4.875" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchitectureDbModel.Services" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchitectureDbModel.SiteSettings" Width="1.5" PointX="11.125" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchitectureDbModel.Slider" Width="1.5" PointX="6.875" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchitectureDbModel.Statistic" Width="1.5" PointX="10.875" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchitectureDbModel.Team" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchitectureDbModel.Testimonials" Width="1.5" PointX="8.875" PointY="3.25" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head partial -->
+@Html.Action("HeadPartial", "AnaLayout")
+
+<body>
+    <main class="home-one overflow-x-hidden">
+
+        <!-- placeholder partial -->
+        @Html.Action("PlaceholderPartial", "AnaLayout")
+
+        <!-- navbar partial -->
+        @Html.Action("MenubarPartial", "AnaLayout")
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+
+                <!-- Değişebilen kısımlar buraya gelecek -->
+                @RenderBody()
+
+                <!-- footer partial -->
+                @Html.Action("FooterPartial", "AnaLayout")
+
+            </div>
+        </div>
+
+        <!-- scroll up partial -->
+        @Html.Action("ScrollUpPartial", "AnaLayout")
+
+    </main>
+
+    <!-- Script partial -->
+    @Html.Action("ScriptPartial", "AnaLayout")
+
+</body>
+</html>
