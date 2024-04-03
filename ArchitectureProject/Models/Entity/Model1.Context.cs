@@ -32,9 +32,9 @@ namespace ArchitectureProject.Models.Entity
         public virtual DbSet<Portfolio> Portfolio { get; set; }
         public virtual DbSet<Services> Services { get; set; }
         public virtual DbSet<SiteSettings> SiteSettings { get; set; }
-        public virtual DbSet<Slider> Slider { get; set; }
         public virtual DbSet<Statistic> Statistic { get; set; }
         public virtual DbSet<Team> Team { get; set; }
         public virtual DbSet<Testimonials> Testimonials { get; set; }
+        public virtual DbSet<Slider> Slider { get; set; }
     }
 }

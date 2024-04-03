@@ -1,4 +1,8 @@
-﻿<!-- start testimonial -->
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Testimonials>
+
+<!-- start testimonial -->
 <section class="testimonial-one section-padding-top-xl section-padding-bottom bg-white overflow-hidden">
     <div class="container">
         <div class="row">
@@ -6,46 +10,29 @@
                 <div>
                     <div class="testimonial-one-slider-wrapper position-relative">
                         <div class="owl-carousel owl-theme">
-                            <div class="item testimonial-one-card">
-                                <div class="row">
-                                    <div class="col-12 col-lg-2">
-                                        <img class="testimonial-one-quote-icon" src="~/archite/architetemplate/img/quoteIcon.png" alt="quote icon">
-                                    </div>
-                                    <div class="col-12 col-lg-10">
-                                        <div class="testimonial-item-content">
-                                            <h3 class="h3 fw-700 line-height-1 dark-text mb-50">
-                                                Çok güzel bir tasarım. Teşekkür ederim. Tavsiye ediyoruz herkese.
-                                            </h3>
-                                            <p class="dark-text fw-500 line-height-5 mt-10 position-relative pe-0 pe-lg-5 mb-1">
-                                                Türkiye
-                                            </p>
-                                            <h6 class="h6 fw-700 line-height-3 dark-text">
-                                                Muhammed Emir Gözcü
-                                            </h6>
+
+                            @foreach (var item in Model)
+                            {
+                                <div class="item testimonial-one-card">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-2">
+                                            <img class="testimonial-one-quote-icon" src="~/archite/architetemplate/img/quoteIcon.png" alt="quote icon">
+                                        </div>
+                                        <div class="col-12 col-lg-10">
+                                            <div class="testimonial-item-content">
+                                                <h3 class="h3 fw-700 line-height-1 dark-text mb-50">@item.Comment                                                </h3>
+                                                <p class="dark-text fw-500 line-height-5 mt-10 position-relative pe-0 pe-lg-5 mb-1">
+                                                    @item.Location
+                                                </p>
+                                                <h6 class="h6 fw-700 line-height-3 dark-text">
+                                                    @item.Name
+                                                </h6>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item testimonial-one-card">
-                                <div class="row">
-                                    <div class="col-12 col-lg-2">
-                                        <img class="testimonial-one-quote-icon" src="~/archite/architetemplate/img/quoteIcon.png" alt="quote icon">
-                                    </div>
-                                    <div class="col-12 col-lg-10">
-                                        <div class="testimonial-item-content">
-                                            <h3 class="h3 fw-700 line-height-1 dark-text mb-50">
-                                                Choosing the right architecture and interior design agency for your project depends on several factors, such as their experience.
-                                            </h3>
-                                            <p class="dark-text fw-500 line-height-5 mt-10 position-relative pe-0 pe-lg-5 mb-1">
-                                                From Turkey
-                                            </p>
-                                            <h6 class="h6 fw-700 line-height-3 dark-text">
-                                                Alex Smith Emer
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            }
+
                         </div>
                     </div>
                 </div>                

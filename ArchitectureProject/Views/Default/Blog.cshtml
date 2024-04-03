@@ -1,0 +1,57 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Blog>
+
+
+<!-- start blog -->
+<section class="blogs-one section-padding-top section-padding-bottom-xl overflow-hidden">
+    <div class="contact-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="position-relative">
+                    <div class="row">
+                        <div class="col-12 col-sm-5 col-lg-4">
+                            <div class="blog-heading">
+                                <h2 class="h2 fw-700 line-height-3 anim-heading-title mb-5 mb-sm-0 blog-one-heading">
+                                    EN YENİ <br>BLOGLARIMIZ
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-7 col-lg-8">
+                            <div>
+                                <div class="blogs-one-cards-container">
+                                    <div class="owl-carousel owl-theme">
+                                        @foreach (var item in Model)
+                                        {
+                                            <div class="item blogs-one-card">
+                                                <div class="hover-img-container">
+                                                    <img class="img-no-hover-effect" src="@item.Image" alt="blog image">
+                                                </div>
+                                                <h6 class="h6 dark-text fw-700 line-height-3 mt-20">
+                                                    <a class="h6 fw-700" href="blogDetails.html">
+                                                        @item.Title
+                                                    </a>
+                                                </h6>
+                                                <p class="p body-text fw-500 line-height-5 pt-15">
+                                                    @if (item.Content.Length > 149)
+                                                    {
+                                                        @item.Content.Substring(0, 150)
+                                                    }
+                                                    else
+                                                    {
+                                                        @item.Content
+                                                    }
+                                                </p>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end blog -->

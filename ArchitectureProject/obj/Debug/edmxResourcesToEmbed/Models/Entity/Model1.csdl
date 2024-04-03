@@ -89,15 +89,6 @@
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Map" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="Slider">
-    <Key>
-      <PropertyRef Name="SliderID" />
-    </Key>
-    <Property Name="SliderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="BigTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-  </EntityType>
   <EntityType Name="Statistic">
     <Key>
       <PropertyRef Name="StatisticID" />
@@ -134,9 +125,17 @@
     <EntitySet Name="Portfolio" EntityType="Self.Portfolio" />
     <EntitySet Name="Services" EntityType="Self.Services" />
     <EntitySet Name="SiteSettings" EntityType="Self.SiteSettings" />
-    <EntitySet Name="Slider" EntityType="Self.Slider" />
     <EntitySet Name="Statistic" EntityType="Self.Statistic" />
     <EntitySet Name="Team" EntityType="Self.Team" />
     <EntitySet Name="Testimonials" EntityType="Self.Testimonials" />
+    <EntitySet Name="Slider" EntityType="ArchitectureDbModel.Slider" />
   </EntityContainer>
+  <EntityType Name="Slider">
+    <Key>
+      <PropertyRef Name="SliderID" />
+    </Key>
+    <Property Name="SliderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BigTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

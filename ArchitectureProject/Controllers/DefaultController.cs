@@ -1,6 +1,8 @@
-﻿using System;
+﻿using ArchitectureProject.Models.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Web;
 using System.Web.Mvc;
 
@@ -8,41 +10,63 @@ namespace ArchitectureProject.Controllers
 {
     public class DefaultController : Controller
     {
+        ArchitectureDbEntities dbEntities = new ArchitectureDbEntities();
         public ActionResult Index()
         {
             return View();
         }
         public PartialViewResult Banner()
         {
+            List<Slider> sliderValues = dbEntities.Slider.ToList();
+            return PartialView(sliderValues);
+        }
+        public PartialViewResult BannerSettingsPartial()
+        {
             return PartialView();
         }
         public PartialViewResult AboutUs()
         {
-            return PartialView();
+            List<About> aboutValues = dbEntities.About.ToList();
+            return PartialView(aboutValues);
         }
         public PartialViewResult CountEmployee()
         {
-            return PartialView();
+            var counterValues = dbEntities.Statistic.ToList();
+            return PartialView(counterValues);
         }
         public PartialViewResult Services()
         {
-            return PartialView();
+            var serviceValues = dbEntities.Services.Take(5).ToList();
+            return PartialView(serviceValues);
         }
         public PartialViewResult Project()
         {
-            return PartialView();
+            var projectValues = dbEntities.Portfolio.ToList();
+            return PartialView(projectValues);
         }
         public PartialViewResult Features()
         {
-            return PartialView();
+            var featureValues = dbEntities.DesignAgency.ToList();
+            return PartialView(featureValues);
         }
         public PartialViewResult Testimonials()
         {
-            return PartialView();
+            var testimonialValues = dbEntities.Testimonials.Take(5).ToList();
+            return PartialView(testimonialValues);
         }
         public PartialViewResult Teams()
         {
+            var teamValues = dbEntities.Team.Take(5).ToList();
+            return PartialView(teamValues);
+        }
+        public PartialViewResult SponsorBanner()
+        {
             return PartialView();
         }
-    }
+		public PartialViewResult Blog()
+		{
+            var blogValues = dbEntities.Blog.Take(5).ToList();
+			return PartialView(blogValues);
+		}
+	}
 }

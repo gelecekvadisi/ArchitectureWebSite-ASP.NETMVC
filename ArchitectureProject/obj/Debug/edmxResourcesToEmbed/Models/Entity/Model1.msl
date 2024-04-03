@@ -97,16 +97,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Slider">
-      <EntityTypeMapping TypeName="ArchitectureDbModel.Slider">
-        <MappingFragment StoreEntitySet="Slider">
-          <ScalarProperty Name="SliderID" ColumnName="SliderID" />
-          <ScalarProperty Name="BigTitle" ColumnName="BigTitle" />
-          <ScalarProperty Name="Content" ColumnName="Content" />
-          <ScalarProperty Name="Image" ColumnName="Image" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Statistic">
       <EntityTypeMapping TypeName="ArchitectureDbModel.Statistic">
         <MappingFragment StoreEntitySet="Statistic">
@@ -135,6 +125,15 @@
           <ScalarProperty Name="Location" ColumnName="Location" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="DateTestimonial" ColumnName="DateTestimonial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Slider">
+      <EntityTypeMapping TypeName="ArchitectureDbModel.Slider">
+        <MappingFragment StoreEntitySet="Slider">
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="BigTitle" ColumnName="BigTitle" />
+          <ScalarProperty Name="SliderID" ColumnName="SliderID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

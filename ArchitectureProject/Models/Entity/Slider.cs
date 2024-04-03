@@ -17,6 +17,5 @@ namespace ArchitectureProject.Models.Entity
         public int SliderID { get; set; }
         public string BigTitle { get; set; }
         public string Content { get; set; }
-        public string Image { get; set; }
     }
 }

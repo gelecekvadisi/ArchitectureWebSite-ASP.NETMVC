@@ -12,10 +12,10 @@
         <EntityTypeShape EntityType="ArchitectureDbModel.Portfolio" Width="1.5" PointX="4.875" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ArchitectureDbModel.Services" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ArchitectureDbModel.SiteSettings" Width="1.5" PointX="11.125" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchitectureDbModel.Slider" Width="1.5" PointX="6.875" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ArchitectureDbModel.Statistic" Width="1.5" PointX="10.875" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ArchitectureDbModel.Team" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ArchitectureDbModel.Testimonials" Width="1.5" PointX="8.875" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchitectureDbModel.Slider" Width="1.5" PointX="6.875" PointY="3.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

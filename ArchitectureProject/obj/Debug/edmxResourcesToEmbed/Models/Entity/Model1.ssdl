@@ -96,7 +96,6 @@
     <Property Name="SliderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="BigTitle" Type="nvarchar" MaxLength="100" />
     <Property Name="Content" Type="nvarchar(max)" />
-    <Property Name="Image" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Statistic">
     <Key>

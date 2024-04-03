@@ -1,58 +1,40 @@
-﻿<!-- start banner -->
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Slider>
+
+<!-- start banner -->
 <section class="banner-one pt-70 pb-70 position-relative overflow-hidden bg-img-zoom d-flex justify-content-center align-items-center">
     <div class="banner-one-wrapper pt-5 pt-sm-0">
-        <!-- floating contact bar -->
-        <div class="floating-contact-box position-absolute">
-            <ul class="d-flex">
-                <li class="contact-info-one text-white">(406) 555-0120</li>
-                <li class="contact-info-two text-white">hello@archito.com</li>
-            </ul>
-        </div>
-        <!-- floating contact bar line -->
-        <div class="floating-line position-absolute"></div>
-        <!-- floating social media bar -->
-        <div class="floating-social-box position-absolute d-flex align-items-center justify-content-center">
-            <ul class="d-flex">
-                <li class="text-white floating-social-icon">
-                    <a href="https://twitter.com">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="text-white floating-social-icon">
-                    <a href="https://linkedin.com">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                </li>
-                <li class="text-white floating-social-icon">
-                    <a href="https://linkedin.com">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li class="social-follow-text text-white">follow us</li>
-            </ul>
-        </div>
+
+        @Html.Action("BannerSettingsPartial")
+
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="banner-onecontents">
-                        <div>
-                            <div class="col-12 col-lg-8 col-xl-7">
-                                <div class="banner-onecontent-left">
-                                    <div>
-                                        <h1 class="text-white fw-700 text-capitalize mb-45 line-height-1 anim-text-hero">
-                                            Making Your Dream Space
-                                        </h1>
+
+                        @*Slider*@
+                        @foreach (var item in Model)
+                        {
+                            <div>
+                                <div class="col-12 col-lg-8 col-xl-7">
+                                    <div class="banner-onecontent-left">
+                                        <div>
+                                            <h1 class="text-white fw-700 text-capitalize mb-45 line-height-1 anim-text-hero">
+                                                @item.BigTitle
+                                            </h1>
+                                        </div>
+                                        <p class="text-white fw-500 line-height-5 mb-60 banner-paragraph position-relative anim-subtext">
+                                            @item.Content
+                                        </p>
+                                        <a href="portfolio.html" class="btn brand-btn text-uppercase border-0">
+                                            <span class="z-1 position-relative">Projelerimiz</span>
+                                        </a>
                                     </div>
-                                    <p class="text-white fw-500 line-height-5 mb-60 banner-paragraph position-relative anim-subtext">
-                                        Welcome to our interior design agency! Our team of experienced designers and decorators is passionate about creating beautiful, functional spaces that enhance our client's lives.
-                                    </p>
-                                    <a href="portfolio.html" class="btn brand-btn text-uppercase border-0">
-                                        <span class="z-1 position-relative">portfolio</span>
-                                    </a>
                                 </div>
+                                <div class="col-12 col-lg-4 col-xl-5"></div>
                             </div>
-                            <div class="col-12 col-lg-4 col-xl-5"></div>
-                        </div>
+                        }
 
                     </div>
                 </div>
@@ -60,7 +42,7 @@
         </div>
         <div class="banner-scroll-bottom d-none d-sm-inline-block">
             <a href="#" class="position-absolute d-flex flex-column">
-                <p class="fw-500 line-height-5 text-white text-uppercase z-3 mb-10">Scroll</p>
+                <p class="fw-500 line-height-5 text-white text-uppercase z-3 mb-10">Kaydır</p>
                 <i class="fa-solid fa-arrow-down-long text-white upDown-animation-fast"></i>
             </a>
         </div>

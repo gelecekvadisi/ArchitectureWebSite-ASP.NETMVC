@@ -1,66 +1,74 @@
-﻿<!-- start about -->
+﻿
+
+@using ArchitectureProject.Models.Entity
+@model List<About>
+
+<!-- start about -->
 <section id="homeOneAbout" class="about-one section-padding-top-xl section-padding-bottom">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="about-one-top">
-                    <div class="row">
-                        <div class="col-12 col-lg-6">
-                            <h2 class="h2  line-height-3 anim-heading-title">
-                                Transforming Spaces Elevating Lives
-                            </h2>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="about-one-first-text-box">
-                                <p class="p body-text fw-500 line-height-5">
-                                    Welcome to our interior design agency! Our team of experienced designers and decorators is passionate about creating beautiful, functional spaces that enhance our clients' lives.
-                                </p>
-                                <a href="portfolio.html" class="btn brand-btn text-uppercase mt-30">
-                                    <span class="z-1 position-relative">learn more</span>
-                                </a>
+
+                @foreach (var item in Model)
+                {
+                    <div class="about-one-top">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <h2 class="h2  line-height-3 anim-heading-title">
+                                    @item.BigTitle
+                                </h2>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-70 about-one-bottom">
-                    <div class="row">
-                        <div class="col-12 col-lg-6">
-                            <div class="position-relative d-flex align-items-center">
-                                <div class="image-cont">
-                                    <img src="~/archite/architetemplate/img/aboutOne.jpg" class="rounded-0 box-a">
-                                </div>
-                                <div class="image-cont-two position-absolute d-none d-lg-inline-block">
-                                    <img src="~/archite/architetemplate/img/aboutOneSmall.jpg" alt="about image small" class="rounded-0">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div>
-                                <h3 class="h3 dark-text fw-700 about-one-subheading line-height-3">
-                                    Making Your Interior Dream Space
-                                </h3>
-                                <div class="about-one-second-text-box mt-85 ml-60">
-                                    <div class="mb-60 about-second-text-box-first-item">
-                                        <h5 class="h5 fw-700 dark-text line-height-3">
-                                            Our Story
-                                        </h5>
-                                        <p class="p body-text fw-500 line-height-5 mt-10">
-                                            Welcome to our interior design agency! Our team of experienced designers and decorators is passionate about creating beautiful, functional spaces that enhance our clients' lives.
-                                        </p>
-                                    </div>
-                                    <div class="mb-0">
-                                        <h5 class="h5 fw-700 dark-text line-height-3">
-                                            Our Goal
-                                        </h5>
-                                        <p class="p body-text fw-500 line-height-5 mt-10">
-                                            Welcome to our interior design agency! Our team of experienced designers and decorators is passionate about creating beautiful, functional spaces that enhance our clients' lives.
-                                        </p>
-                                    </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="about-one-first-text-box">
+                                    <p class="p body-text fw-500 line-height-5">
+                                       @item.Content
+                                    </p>
+                                    <a href="portfolio.html" class="btn brand-btn text-uppercase mt-30">
+                                        <span class="z-1 position-relative">Daha Fazlası</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="mt-70 about-one-bottom">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="position-relative d-flex align-items-center">
+                                    <div class="image-cont">
+                                        <img src="@item.BigImage" class="rounded-0 box-a">
+                                    </div>
+                                    <div class="image-cont-two position-absolute d-none d-lg-inline-block">
+                                        <img src="@item.ShortImage" alt="about image small" class="rounded-0">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div>
+                                    <h3 class="h3 dark-text fw-700 about-one-subheading line-height-3">
+                                        @item.SubTitle
+                                    </h3>
+                                    <div class="about-one-second-text-box mt-85 ml-60">
+                                        <div class="mb-60 about-second-text-box-first-item">
+                                            <h5 class="h5 fw-700 dark-text line-height-3">
+                                                Hikayemiz
+                                            </h5>
+                                            <p class="p body-text fw-500 line-height-5 mt-10">@item.OurStory
+                                            </p>
+                                        </div>
+                                        <div class="mb-0">
+                                            <h5 class="h5 fw-700 dark-text line-height-3">
+                                                Hedefimiz
+                                            </h5>
+                                            <p class="p body-text fw-500 line-height-5 mt-10">@item.OurGoal
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
             </div>
         </div>
     </div>

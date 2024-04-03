@@ -1,99 +1,109 @@
-﻿<!-- start projects -->
-<section class="projects-one section-padding-bottom-xl section-padding-top-xl">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="row align-items-center">
-                    <div class="col-12 col-lg-6 ">
-                        <div class="projects-one-item">
-                            <a href="portfolioDetails.html">
-                                <h2 class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block stroke-mobile-position">
-                                    structural design
-                                </h2>
-                            </a>
-                            <div>
-                                <h2 class="h2 fw-700 line-height-3 mb-90  projects-section-title anim-heading-title">
-                                    Our Expert Interior Design Project
-                                </h2>
-                                <div class="project-img-ontainer">
-                                    <img class="home-one-portfolio-first-img" src="~/archite/architetemplate/img/projectsOne.jpg" alt="project image">
-                                    <a href="portfolioDetails.html" class="btn text-uppercase project-btn">
-                                        <span class="position-relative z-1">View Project</span>
-                                        <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                                    </a>
-                                </div>
-                                <a href="portfolioDetails.html" class="h6 line-height-3">
-                                    <h6 class="h6 mt-15 dark-text line-height-3 under-line-hover fw-700  position-absolute">
-                                        Project - Office Interior Design
-                                    </h6>
-                                </a>
-                                <a data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500" data-aos-offset="100" href="portfolio.html" class="btn brand-btn text-uppercase mt-100 d-none d-lg-inline-block">
-                                    <span class="z-1 position-relative">
-                                        View
-                                        Projects
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 ">
-                        <div class="mt-5 mt-lg-0">
-                            <div class="ml-100 projects-one-item">
-                                <a href="portfolioDetails.html">
-                                    <h2 class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block">
-                                        Architecture
-                                    </h2>
-                                </a>
-                                <div class="projects-one-contents">
-                                    <div class="project-img-ontainer">
-                                        <img class="home-one-portfolio-second-img" src="~/archite/architetemplate/img/projectsTwo.jpg" alt="project image">
-                                        <a href="portfolioDetails.html" class="btn text-uppercase project-btn">
-                                            <span class="position-relative z-1">View Project</span>
-                                            <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                                        </a>
-                                    </div>
-                                    <a href="portfolioDetails.html" class="h6 line-height-3">
-                                        <h6 class="h6 mt-15 dark-text line-height-3 under-line-hover fw-700  position-absolute">
-                                            Project - Office Interior Design
-                                        </h6>
-                                    </a>
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Portfolio>
 
-                                </div>
-                            </div>
-                            <div class="project-item-left-padding mt-110 projects-one-item">
+@if (Model.Count > 2)
+{
+    <!-- start projects -->
+    <section class="projects-one section-padding-bottom-xl section-padding-top-xl">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row align-items-center">
+
+                        <div class="col-12 col-lg-6 ">
+                            <div class="projects-one-item">
                                 <a href="portfolioDetails.html">
-                                    <h2 class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block project-text-stroke-utility">
-                                        landscape
+                                    <h2 class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block stroke-mobile-position">
+                                        @Model[0].Title
                                     </h2>
                                 </a>
-                                <div class="projects-contents">
-                                    <div class="project-img-ontainer text-end">
-                                        <img class="home-one-portfolio-third-img" src="~/archite/architetemplate/img/projectsThree.jpg" alt="project image">
+                                <div>
+                                    <h2 class="h2 fw-700 line-height-3 mb-90  projects-section-title anim-heading-title">
+                                        Projelerimiz
+                                    </h2>
+                                    <div class="project-img-ontainer">
+                                        <img class="home-one-portfolio-first-img" src="@Model[0].Image" alt="project image">
                                         <a href="portfolioDetails.html" class="btn text-uppercase project-btn">
-                                            <span class="position-relative z-1">View Project</span>
+                                            <span class="position-relative z-1">Projeye Git</span>
                                             <i class="fa-solid fa-arrow-right-long ms-2"></i>
                                         </a>
                                     </div>
                                     <a href="portfolioDetails.html" class="h6 line-height-3">
                                         <h6 class="h6 mt-15 dark-text line-height-3 under-line-hover fw-700  position-absolute">
-                                            Project - Office Interior Design
+                                            @Model[0].ProjectType
                                         </h6>
+                                    </a>
+                                    <a data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500" data-aos-offset="100" href="portfolio.html" class="btn brand-btn text-uppercase mt-100 d-none d-lg-inline-block">
+                                        <span class="z-1 position-relative">
+                                            Tüm Projeler
+                                        </span>
                                     </a>
                                 </div>
                             </div>
-                            <div class="project-mobile-cta-button">
-                                <a data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500" data-aos-offset="100" href="portfolio.html" class="btn brand-btn text-uppercase mt-60 d-inline-block d-lg-none">
-                                    <span class="z-1 position-relative">
-                                        View
-                                        Projects
-                                    </span>
-                                </a>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+                            <div class="mt-5 mt-lg-0">
+
+                                <div class="ml-100 projects-one-item">
+                                    <a href="portfolioDetails.html">
+                                        <h2 class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block">
+                                            @Model[1].Title
+                                        </h2>
+                                    </a>
+                                    <div class="projects-one-contents">
+                                        <div class="project-img-ontainer">
+                                            <img class="home-one-portfolio-second-img" src="@Model[1].Image" alt="project image">
+                                            <a href="portfolioDetails.html" class="btn text-uppercase project-btn">
+                                                <span class="position-relative z-1">Projeye Git</span>
+                                                <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                                            </a>
+                                        </div>
+                                        <a href="portfolioDetails.html" class="h6 line-height-3">
+                                            <h6 class="h6 mt-15 dark-text line-height-3 under-line-hover fw-700  position-absolute">
+                                                @Model[1].ProjectType
+                                            </h6>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="project-item-left-padding mt-110 projects-one-item">
+                                    <a href="portfolioDetails.html">
+                                        <h2 class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block project-text-stroke-utility">
+                                            @Model[2].Title
+                                        </h2>
+                                    </a>
+                                    <div class="projects-contents">
+                                        <div class="project-img-ontainer text-end">
+                                            <img class="home-one-portfolio-third-img" src="@Model[2].Image" alt="project image">
+                                            <a href="portfolioDetails.html" class="btn text-uppercase project-btn">
+                                                <span class="position-relative z-1">Projeye Git</span>
+                                                <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                                            </a>
+                                        </div>
+                                        <a href="portfolioDetails.html" class="h6 line-height-3">
+                                            <h6 class="h6 mt-15 dark-text line-height-3 under-line-hover fw-700  position-absolute">
+                                                @Model[2].ProjectType
+                                            </h6>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="project-mobile-cta-button">
+                                    <a data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500" data-aos-offset="100" href="portfolio.html" class="btn brand-btn text-uppercase mt-60 d-inline-block d-lg-none">
+                                        <span class="z-1 position-relative">
+                                            Tümünü Göster
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- end projects -->
+    </section>
+    <!-- end projects -->
+
+}

@@ -433,6 +433,9 @@
     <Content Include="Views\AnaLayout\ScriptPartial.cshtml" />
     <Content Include="Views\AnaLayout\ScrollUpPartial.cshtml" />
     <Content Include="Views\AnaLayout\PlaceholderPartial.cshtml" />
+    <Content Include="Views\Default\BannerSettingsPartial.cshtml" />
+    <Content Include="Views\Default\SponsorBanner.cshtml" />
+    <Content Include="Views\Default\Blog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

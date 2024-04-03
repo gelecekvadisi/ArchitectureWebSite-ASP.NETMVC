@@ -1,4 +1,8 @@
-﻿<!-- start services -->
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Services>
+
+<!-- start services -->
 <section class="services-one section-padding-top-xl section-padding-bottom-xl bg-black">
     <div class="container">
         <div class="row">
@@ -7,7 +11,7 @@
                     <div class="row">
                         <div class="col-12 col-sm-6">
                             <h2 class="h2 text-black line-height-3 anim-heading-title text-white text-uppercase">
-                                Our Expert Interior Design Services
+                                PROFESYONEL HİZMETLERİMİZ
                             </h2>
                         </div>
                         <div class="col-12 col-sm-6">
@@ -17,74 +21,25 @@
                 <div class="service-one-card-container mt-80 position-relative">
                     <div class="owl-carousel owl-theme">
 
-                        <div class="item service-one-card position-relative">
-                            <div class="service-imag">
-                                <img src="~/archite/architetemplate/img/serviceBgOne.jpg" class="w-100 position-relative" alt="Service Images">
+                        @foreach (var item in Model)
+                        {
+                            <div class="item service-one-card position-relative">
+                                <div class="service-imag">
+                                    <img src="@item.Image" class="w-100 position-relative" alt="Service Images">
+                                </div>
+                                <div class="position-absolute service-one-contents z-1">
+                                    <h5 class="h5 fw-700 text-white line-height-3 mb-25">
+                                        @item.Title
+                                    </h5>
+                                    <p class="p text-white fw-500 line-height-5 mb-65">
+                                        @item.ShortContent
+                                    </p>
+                                    <a class="btn p-0 text-white text-uppercase fw-500" href="about.html">
+                                        <span class="me-2">Devamını Oku</span> <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="position-absolute service-one-contents z-1">
-                                <h5 class="h5 fw-700 text-white line-height-3 mb-25">
-                                    Installation Space Planning & Luxury Interior Design
-                                </h5>
-                                <p class="p text-white fw-500 line-height-5 mb-65">
-                                    Welcome to our interior design agency! Our team of experienced designers
-                                </p>
-                                <a class="btn p-0 text-white text-uppercase fw-500" href="about.html">
-                                    <span class="me-2">Learn More</span> <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="item service-one-card position-relative">
-                            <div class="service-imag">
-                                <img src="~/archite/architetemplate/img/serviceBgTwo.jpg" alt="Service Images">
-                            </div>
-                            <div class="position-absolute z-1 service-one-contents">
-                                <h5 class="h5 fw-700 text-white line-height-3 mb-25">
-                                    Planning & Installation of Space
-                                </h5>
-                                <p class="p text-white fw-500 line-height-5 mb-65">
-                                    Welcome to our interior design agency! Our team of experienced designers
-                                </p>
-                                <a class="btn p-0 text-white text-uppercase fw-500" href="about.html">
-                                    <span class="me-2">Learn More</span> <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                            <div class="service-one-card-stroke position-absolute"></div>
-                        </div>
-                        <div class="item service-one-card position-relative">
-                            <div class="service-imag">
-                                <img src="~/archite/architetemplate/img/serviceBgThree.jpg" alt="Service Images">
-                            </div>
-
-                            <div class="position-absolute z-1 service-one-contents">
-                                <h5 class="h5 fw-700 text-white line-height-3 mb-25">
-                                    Space Planning & Installation
-                                </h5>
-                                <p class="p text-white fw-500 line-height-5 mb-65">
-                                    Welcome to our interior design agency! Our team of experienced designers
-                                </p>
-                                <a class="btn p-0 text-white text-uppercase fw-500" href="about.html">
-                                    <span class="me-2">Learn More</span> <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                            <div class="service-one-card-stroke position-absolute"></div>
-                        </div>
-                        <div class="item service-one-card position-relative">
-                            <div class="service-imag">
-                                <img src="~/archite/architetemplate/img/serviceBgFour.jpg" alt="Service Images">
-                            </div>
-                            <div class="position-absolute z-1 service-one-contents">
-                                <h5 class="h5 fw-700 text-white line-height-3 mb-25">
-                                    Planning for Architecture Design
-                                </h5>
-                                <p class="p text-white fw-500 line-height-5 mb-65">
-                                    Welcome to our interior design agency! Our team of experienced designers
-                                </p>
-                                <a class="btn p-0 text-white text-uppercase fw-500" href="about.html">
-                                    <span class="me-2">Learn More</span> <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                            <div class="service-one-card-stroke position-absolute"></div>
-                        </div>
+                        }
 
                     </div>
                 </div>
