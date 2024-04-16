@@ -1,0 +1,62 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Portfolio>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+@Html.Action("InnerPage", "Service", new { title = "YAPTIĞIMIZ PROJELER" })
+
+
+<!-- start blogs -->
+<section class="blogs-archieve section-padding-top-xl section-padding-bottom-xl">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="blogs-archieve-wrapper">
+                    <div class="row">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-12 col-lg-6 pr-80 blog-archieve-body">
+
+                                <div class="blogs-archieve-card mb-70" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                                    <div class="hover-img-container">
+                                        <img src="@item.Image" class="img-fluid img-no-hover-effect" alt="blog image">
+                                    </div>
+                                    <p class="p body-text fw-500 line-height-5 pt-35">
+                                        @item.CustomerSupport
+                                    </p>
+                                    <h5 class="mt-10">
+                                        <a class="blog-archieve-card-title dark-text fw-700 line-height-3" href="blogDetails.html">
+                                            @item.Title
+                                        </a>
+                                    </h5>
+                                    <p class="p body-text fw-500 line-height-5 pt-15">
+                                        @if (item.Content.Length > 350)
+                                        {
+                                            @item.Content.Substring(0, 350)
+                                        }
+                                        else
+                                        {
+                                            @item.Content
+                                        }
+                                    </p>
+                                    <a class="fs-6 dark-text fw-500 line-height-3 text-uppercase mt-25 d-flex align-items-center" href="blogDetails.html">
+                                        <span class="mr-10">Devamını Oku</span>
+                                        <span><i class="fa-solid fa-arrow-right"></i></span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end blogs -->
+@* testimonials partial view *@
+@Html.Action("SloganBanner", "About")

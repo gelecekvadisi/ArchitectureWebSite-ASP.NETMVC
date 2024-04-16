@@ -1,0 +1,53 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Services>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+@Html.Action("InnerPage", "Service", new { title = "PROFESYONEL HİZMETLERİMİZ" })
+
+<!-- start services -->
+<section class="services-archieve section-padding-bottom section-padding-top-xl">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="services-archieve-grid">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="item service-one-card position-relative">
+                            <div class="service-imag">
+                                <img src="@item.Image" class="w-100 position-relative" alt="Service Images">
+                            </div>
+                            <div class="position-absolute service-one-contents z-1">
+                                <h5 class="h5 fw-700 text-white line-height-3 mb-25">
+                                    @item.Title
+                                </h5>
+                                <p class="p text-white fw-500 line-height-5 mb-65">
+                                    @if (item.Content.Length > 100)
+                                    {
+                                        @item.Content.Substring(0, 100)
+                                    }
+                                    else
+                                    {
+                                        @item.Content
+                                    }
+                                </p>
+                                <a class="btn p-0 text-white text-uppercase fw-500" href="servicesDetails.html">
+                                    <span class="me-2">Devamını Oku</span> <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end services -->
+@* testimonials partial view *@
+@Html.Action("SloganBanner", "About")

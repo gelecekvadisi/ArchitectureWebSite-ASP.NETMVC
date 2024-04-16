@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+<br /><br /><br /><br />
+
+@* sponsor partial view *@
+@Html.Action("SponsorBanner", "Default")
+
+@* About partial view *@
+@Html.Action("AboutUs", "Default")
+
+@* counter employee partial view *@
+@Html.Action("CountEmployee", "Default")
+
+@* features partial view *@
+@Html.Action("Features", "Default")
+
+@* testimonials partial view *@
+@Html.Action("Testimonials", "Default")
+
+@* testimonials partial view *@
+@Html.Action("SloganBanner")

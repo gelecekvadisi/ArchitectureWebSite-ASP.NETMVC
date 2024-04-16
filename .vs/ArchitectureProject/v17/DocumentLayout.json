@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\views\\default\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\views\\default\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\views\\default\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\views\\default\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\architectureproject\\controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\views\\portfolio\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\views\\portfolio\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Default\\Index.cshtml",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Views\\Default\\Index.cshtml",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Default\\Index.cshtml",
-              "RelativeToolTip": "ArchitectureProject\\Views\\Default\\Index.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T22:06:39.8Z",
+              "DocumentIndex": 0,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "ArchitectureProject\\Controllers\\ServiceController.cs",
+              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "ArchitectureProject\\Controllers\\ServiceController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T18:37:48.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Blog.cshtml",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Default\\Blog.cshtml",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Views\\Default\\Blog.cshtml",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Default\\Blog.cshtml",
-              "RelativeToolTip": "ArchitectureProject\\Views\\Default\\Blog.cshtml",
-              "ViewState": "AQIAABYAAAAAAAAAAAAcwCwAAAAyAAAA",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Blog\\Index.cshtml",
+              "RelativeDocumentMoniker": "ArchitectureProject\\Views\\Blog\\Index.cshtml",
+              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Blog\\Index.cshtml",
+              "RelativeToolTip": "ArchitectureProject\\Views\\Blog\\Index.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAIAwwCEAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T22:02:25.611Z",
+              "WhenOpened": "2024-04-15T18:22:40.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BlogController.cs",
+              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\BlogController.cs",
+              "RelativeDocumentMoniker": "ArchitectureProject\\Controllers\\BlogController.cs",
+              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\BlogController.cs",
+              "RelativeToolTip": "ArchitectureProject\\Controllers\\BlogController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T18:22:30.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DefaultController.cs",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\DefaultController.cs",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Controllers\\DefaultController.cs",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\DefaultController.cs",
-              "RelativeToolTip": "ArchitectureProject\\Controllers\\DefaultController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAAwEEAAAAeAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Portfolio\\Index.cshtml",
+              "RelativeDocumentMoniker": "ArchitectureProject\\Views\\Portfolio\\Index.cshtml",
+              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Portfolio\\Index.cshtml",
+              "RelativeToolTip": "ArchitectureProject\\Views\\Portfolio\\Index.cshtml",
+              "ViewState": "AQIAAAcAAAAAAAAAAIAwwA8AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T17:26:01.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PortfolioController.cs",
+              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\PortfolioController.cs",
+              "RelativeDocumentMoniker": "ArchitectureProject\\Controllers\\PortfolioController.cs",
+              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\PortfolioController.cs",
+              "RelativeToolTip": "ArchitectureProject\\Controllers\\PortfolioController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T18:51:59.782Z",
+              "WhenOpened": "2024-04-15T17:25:32.738Z",
               "EditorCaption": ""
             }
           ]

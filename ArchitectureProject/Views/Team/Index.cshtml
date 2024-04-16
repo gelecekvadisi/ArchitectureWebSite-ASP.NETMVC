@@ -1,0 +1,62 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Team>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+@Html.Action("InnerPage", "Service", new { title = "TAKIMIMIZ" })
+
+<!-- strat team members -->
+<section class="team-one section-padding-top-xl section-padding-bottom bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="team-one-card-container">
+                    <div class="team-one-card-row">
+
+                        @foreach (var item in Model)
+                        {
+                            <div class="team-one-item position-relative mb-30">
+                                <div class="team-img">
+                                    <img class="img-fluid" src="@item.Image" alt="team member">
+                                </div>
+                                <div class="team-one-card-info">
+                                    <h6 class="h6 text-white fw-700 line-height-3">
+                                        @item.Name
+                                    </h6>
+                                    <p class="p body-text fw-500 line-height-5">
+                                        @item.Job
+                                    </p>
+                                </div>
+                                <div class="team-member-details d-flex flex-column">
+                                    <div class="member-details-social d-flex align-items-center">
+                                        <a class="mx-2" href="https://facebook.com">
+                                            <i class="fa-brands fa-facebook-f text-white fs-5"></i>
+                                        </a>
+                                        <a class="mx-2" href="https://linkedin.com">
+                                            <i class="fa-brands fa-linkedin-in text-white fs-5"></i>
+                                        </a>
+                                        <a class="mx-2" href="https://twitter.com">
+                                            <i class="fa-brands fa-twitter text-white fs-5"></i>
+                                        </a>
+
+                                    </div>
+                                    <a class="btn p-0 text-white text-uppercase fw-500 mt-20" href="teamDetails.html">
+                                        <span class="z-1 position-relative">Devamını Oku</span> <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end team members -->
+
+@Html.Action("SloganBanner", "About")
