@@ -19,5 +19,6 @@ namespace ArchitectureProject.Models.Entity
         public string Job { get; set; }
         public string Image { get; set; }
         public Nullable<System.DateTime> DateTeam { get; set; }
+        public string ShortContent { get; set; }
     }
 }

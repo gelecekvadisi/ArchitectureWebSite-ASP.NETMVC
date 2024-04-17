@@ -1,0 +1,100 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<SiteSettings>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+@Html.Action("InnerPage", "Service", new { title = "BİZE ULAŞIN" })
+
+<section class="contact section-padding-bottom-xl section-padding-top-xl overflow-hidden">
+    <div class="contact-container">
+        <div class="contact-wrapper">
+            <div class="row">
+                <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500" data-aos-offset="0" class="col-12 col-lg-6">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="row gy-5 gy-lg-0">
+                            <div class="col-12 col-sm-4 count-one-border-responsive position-relative">
+                                <div class="contact-info-wrapper">
+                                    <div class="contact-info-icon d-flex justify-content-center align-items-center">
+                                        <i class="fa-solid fa-location-dot dark-text d-inline-block"></i>
+                                    </div>
+                                    <h4 class="dark-text fw-700 line-height-3 ">Adres</h4>
+                                    <p class="p body-text fw-500 line-height-5">
+                                        @item.Address
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4 count-one-border-responsive position-relative">
+                                <div class="contact-info-wrapper">
+                                    <div class="contact-info-icon d-flex justify-content-center align-items-center">
+                                        <i class="fa-solid fa-phone-volume dark-text d-inline-block"></i>
+                                    </div>
+                                    <h4 class="dark-text fw-700 line-height-3 ">Telefon Numarası</h4>
+                                    <p class="p body-text fw-500 line-height-5">
+
+                                        <a class="body-text" href="tel:@item.PhoneNumber">@item.PhoneNumber</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4 position-relative">
+                                <div class="contact-info-wrapper">
+                                    <div class="contact-info-icon d-flex justify-content-center align-items-center">
+                                        <i class="fa-solid fa-envelope dark-text d-inline-block"></i>
+                                    </div>
+                                    <h4 class="dark-text fw-700 line-height-3 ">Mail Adresi</h4>
+                                    <p class="p body-text fw-500 line-height-5">
+
+                                        <a class="body-text" href="mailto:@item.Email">@item.Email</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="mt-100">
+                        <h4 class="contact-form-heading fw-700 line-height-3 dark-text mb-70">
+                            Bizimle iletişime geçin
+                        </h4>
+                        <form method="post" class="contact-page-form">
+                            <div class="row mb-50">
+                                <div class="col">
+                                    <input type="text" name="Name" class="form-control" placeholder="Ad Soyad">
+                                </div>
+                                <div class="col">
+                                    <input type="email" name="Email" class="form-control" placeholder="Mail Adresi">
+                                </div>
+                            </div>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" name="Message" placeholder="Mesajınız" rows="3"></textarea>
+
+                            <button class="btn brand-btn text-uppercase d-inline-block mt-60" type="submit">
+                                <span class="position-relative z-1">Mesajı Gönder</span>
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 text-center text-lg-end d-none d-lg-flex">
+                    <div class="w-100">
+                        <img src="~/archite/architetemplate/img/experienceOneImg.jpg" class="img-no-hover-effect" alt="contact img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end contact -->
+<!-- start map -->
+@foreach (var item in Model)
+{
+    <div class="contact-location-map">
+        <iframe src="@item.Map"
+                width="100" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+}
+

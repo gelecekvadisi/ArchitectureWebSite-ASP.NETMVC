@@ -1,0 +1,64 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Blog>
+
+@{
+    ViewBag.Title = "BlogDetail";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <!-- start inner page banner-->
+    <section class="blog-details-page-banner section-padding-bottom section-padding-top-xl">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="blog-details-page-banner-wrapper">
+                        <h2 class="h2 dark-text fw-700 anim-text-hero line-height-3 text-start">
+                            @item.Title
+                        </h2>
+                        <div class="mt-50 blog-details-banner-bottom">
+                            <div class="row w-100">
+                                <div class="col-12 col-sm-5 col-lg-4 col-xl-3 mb-3 mb-sm-0">
+                                    <h6 class="h6 fw-400 body-text line-height-3 bottom-gradient-divider">
+                                        Yazar:
+                                        <span class="fw-700 dark-text">@item.Author</span>
+                                    </h6>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4 col-xl-4 mt-3 mt-sm-0">
+                                    <h6 class="h6 fw-400 body-text line-height-3 bottom-gradient-divider">
+                                        Yayın Tarihi:
+                                        <span class="fw-700 dark-text">@(((DateTime)item.DateBlog).ToString("dd MMMM yyyy"))</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end inner page banner-->
+    <!-- start blog details -->
+    <div class="blog-details section-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="blog-details-wrapper">
+                        <div class="hover-img-container">
+                            <img src="@item.Image" class="img-fluid blog-details-img-1" alt="featured image">
+                        </div>
+                        <p class="p body-text fw-500 line-height-5 mt-50 mb-80">
+                            @item.Content
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end blog details -->
+
+}
+
+@Html.Action("BlogBottomSlider")

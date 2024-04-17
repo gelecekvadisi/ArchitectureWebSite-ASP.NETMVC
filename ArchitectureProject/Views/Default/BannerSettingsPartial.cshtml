@@ -1,30 +1,37 @@
-﻿<!-- floating contact bar -->
-<div class="floating-contact-box position-absolute">
-    <ul class="d-flex">
-        <li class="contact-info-one text-white">(406) 555-0120</li>
-        <li class="contact-info-two text-white">hello@archito.com</li>
-    </ul>
-</div>
-<!-- floating contact bar line -->
-<div class="floating-line position-absolute"></div>
-<!-- floating social media bar -->
-<div class="floating-social-box position-absolute d-flex align-items-center justify-content-center">
-    <ul class="d-flex">
-        <li class="text-white floating-social-icon">
-            <a href="https://twitter.com">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-        </li>
-        <li class="text-white floating-social-icon">
-            <a href="https://linkedin.com">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-        </li>
-        <li class="text-white floating-social-icon">
-            <a href="https://linkedin.com">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-        </li>
-        <li class="social-follow-text text-white">Takip Et</li>
-    </ul>
-</div>
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<SiteSettings>
+
+@foreach (var item in Model)
+{
+    <!-- floating contact bar -->
+    <div class="floating-contact-box position-absolute">
+        <ul class="d-flex">
+            <li class="contact-info-one text-white">@item.PhoneNumber</li>
+            <li class="contact-info-two text-white">@item.Email</li>
+        </ul>
+    </div>
+    <!-- floating contact bar line -->
+    <div class="floating-line position-absolute"></div>
+    <!-- floating social media bar -->
+    <div class="floating-social-box position-absolute d-flex align-items-center justify-content-center">
+        <ul class="d-flex">
+            <li class="text-white floating-social-icon">
+                <a href="@item.TwitterLink">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </li>
+            <li class="text-white floating-social-icon">
+                <a href="@item.LinkedinLink">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li class="text-white floating-social-icon">
+                <a href="@item.FacebookLink">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </li>
+            <li class="social-follow-text text-white">Takip Et</li>
+        </ul>
+    </div>
+}

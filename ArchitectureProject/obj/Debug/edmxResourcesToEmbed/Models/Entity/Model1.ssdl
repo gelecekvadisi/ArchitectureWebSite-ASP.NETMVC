@@ -114,6 +114,7 @@
     <Property Name="Job" Type="nvarchar" MaxLength="50" />
     <Property Name="Image" Type="nvarchar" MaxLength="100" />
     <Property Name="DateTeam" Type="datetime" />
+    <Property Name="ShortContent" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="Testimonials">
     <Key>

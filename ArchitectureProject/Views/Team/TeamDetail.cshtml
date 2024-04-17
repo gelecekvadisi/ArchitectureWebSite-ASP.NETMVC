@@ -1,0 +1,52 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Team>
+
+@{
+    ViewBag.Title = "TeamDetail";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <!-- start team details -->
+    <section class="team-details section-padding-bottom section-padding-top-xl">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="team-details-wrapper">
+                        <h2 class="h2 anim-heading-title fw-700 line-height-3 mb-70 appear-text">
+                            @item.Name & <br>@item.Job
+                        </h2>
+                        <div class="row">
+                            <div class="col-12 col-lg-4 pe-xl-4">
+                                <div class="hover-img-container">
+                                    <img src="@item.Image" alt="team member" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200" data-aos-offset="200" class="img-fluid">
+                                </div>                                
+                            </div>
+                            <div class="col-12 col-lg-8 ps-3 ps-lg-5">
+                                <div class="mb-70 mt-4 mt-lg-0">
+                                    <h3 class="h3 dark-text fw-700 line-height-3 anim-text-hero">
+                                        @item.Name
+                                    </h3>
+                                    <p class="p dark-text fw-500 line-height-3 mt-1 mb-25">
+                                        @item.Job
+                                    </p>
+                                    <p class="p body-text fw-500 line-height-5 mb-20 anim-subtext">
+                                        @item.ShortContent
+                                        
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end team details -->
+}
+
+@* testimonials partial view *@
+@Html.Action("SloganBanner", "About")

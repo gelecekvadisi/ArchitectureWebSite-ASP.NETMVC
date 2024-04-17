@@ -22,7 +22,8 @@ namespace ArchitectureProject.Controllers
         }
         public PartialViewResult BannerSettingsPartial()
         {
-            return PartialView();
+            var values = dbEntities.SiteSettings.ToList();
+            return PartialView(values);
         }
         public PartialViewResult AboutUs()
         {

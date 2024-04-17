@@ -1,0 +1,56 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Services>
+
+<!-- start related news -->
+<section class="blogs-one section-padding-top section-padding-bottom-xl overflow-hidden">
+    <div class="contact-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="position-relative">
+                    <div class="row">
+                        <div class="col-12 col-sm-5 col-lg-4">
+                            <div class="blog-heading">
+                                <h2 class="h2 anim-heading-title fw-700 line-height-3 appear-text mb-5 mb-sm-0 blog-one-heading">
+                                    Hizmetlerimiz
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-7 col-lg-8">
+                            <div>
+                                <div class="blogs-one-cards-container">
+                                    <div class="owl-carousel owl-theme">
+                                        @foreach (var item in Model)
+                                        {
+                                            <div class="item blogs-one-card">
+                                                <div class="hover-img-container">
+                                                    <img class="img-no-hover-effect" src="@item.Image" alt="blog image">
+                                                </div>
+                                                <h5 class="h5 dark-text fw-700 line-height-3 mt-20">
+                                                    <a class="h5 fw-700" href="/Service/ServiceDetail/@item.ServicesID">
+                                                        @item.Title
+                                                    </a>
+                                                </h5>
+                                                <p class="p body-text fw-500 line-height-5 pt-15">
+                                                    @if (item.Content.Length > 150)
+                                                    {
+                                                        @item.Content.Substring(0, 150);
+                                                    }
+                                                    else
+                                                    {
+                                                        @item.Content;
+                                                    }
+                                                </p>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end related news -->

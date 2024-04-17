@@ -1,0 +1,85 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Services>
+
+@{
+    ViewBag.Title = "ServiceDetail";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+
+@foreach (var item in Model)
+{
+    @Html.Action("InnerPage", "Service", new { title = item.Title })
+
+    <!-- start service details info -->
+    <section class="service-details-info section-padding-top-xl">
+        <div class="container">
+            <div class="details-info-wrapper">
+                <div class="row align-items-center mb-100 services-details-info-top">
+                    <div class="col-12 col-lg-6">
+                        <h5 class="h5 dark-text fw-700 line-height-3">
+                            @item.Title
+                        </h5>
+                        <p class="body-text-two fw-500 line-height-5 mt-20 services-details-info-top-paragraph">
+                            @item.ShortContent
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+                        <div class="row mb-4 align-items-center">
+                            <div class="col-6 col-sm-8">
+                                <h6 class="h6 fw-400 body-text line-height-3">
+                                    Çalışma Saatleri:
+                                </h6>
+                            </div>
+                            <div class="col-6 col-sm-4">
+                                <h6 class="h6 fw-700 dark-text line-height-3">
+                                    @item.WeTakeTime
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="service-details-divider"></div>
+                        <div class="row mt-4 align-items-center">
+                            <div class="col-6 col-sm-8">
+                                <h6 class="h6 fw-400 body-text line-height-3">
+                                    Toplam Süre:
+                                </h6>
+                            </div>
+                            <div class="col-6 col-sm-4">
+                                <h6 class="h6 fw-700 dark-text line-height-3">
+                                    @item.CustomerSupport
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end service details info -->
+    <!-- start service details extra info -->
+    <div class="service-extra-info section-padding-bottom">
+        <div class="container">
+            <div class="service-extra-info-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-12 col-xl-4 d-none d-xl-inline-block">
+                        <div class="hover-img-container">
+                            <img class="img-fluid blog-details-img-6" src="@item.Image" alt="service details extra image">
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-8 mt-5 mt-lg-0">
+                        <p class="body-text fw-500 line-height-5 ps-0 ps-xl-5 mb-70 service-extra-info-paragrapg-top">
+                           @item.Content
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end service details extra info -->
+
+}
+
+
+@* slogan banner *@
+@Html.Action("SloganBanner", "About")

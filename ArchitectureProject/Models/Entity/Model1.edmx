@@ -119,6 +119,7 @@
           <Property Name="Job" Type="nvarchar" MaxLength="50" />
           <Property Name="Image" Type="nvarchar" MaxLength="100" />
           <Property Name="DateTeam" Type="datetime" />
+          <Property Name="ShortContent" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Testimonials">
           <Key>
@@ -253,6 +254,7 @@
           <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DateTeam" Type="DateTime" Precision="3" />
+          <Property Name="ShortContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Testimonials">
           <Key>
@@ -399,6 +401,7 @@
           <EntitySetMapping Name="Team">
             <EntityTypeMapping TypeName="ArchitectureDbModel.Team">
               <MappingFragment StoreEntitySet="Team">
+                <ScalarProperty Name="ShortContent" ColumnName="ShortContent" />
                 <ScalarProperty Name="TeamID" ColumnName="TeamID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Job" ColumnName="Job" />

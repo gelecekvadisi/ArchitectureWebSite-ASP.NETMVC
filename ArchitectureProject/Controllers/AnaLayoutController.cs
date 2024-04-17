@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArchitectureProject.Models.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace ArchitectureProject.Controllers
 {
     public class AnaLayoutController : Controller
     {
+        ArchitectureDbEntities dbEntities = new ArchitectureDbEntities();
         public PartialViewResult HeadPartial()
         {
             return PartialView();
@@ -18,7 +20,8 @@ namespace ArchitectureProject.Controllers
         }
         public PartialViewResult FooterPartial()
         {
-            return PartialView();
+            var values = dbEntities.SiteSettings.ToList();
+            return PartialView(values);
         }
         public PartialViewResult ScriptPartial()
         {

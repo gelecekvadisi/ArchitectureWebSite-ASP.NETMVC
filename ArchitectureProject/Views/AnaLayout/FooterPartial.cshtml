@@ -1,84 +1,92 @@
-﻿<!-- start footer -->
-<footer class="footer-one">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12 col-sm-5">
-                        <div class="logo mb-1">
-                            <img src="~/archite/architetemplate/img/Logo.png" alt="logo">
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<SiteSettings>
+
+@foreach (var item in Model)
+{
+    <!-- start footer -->
+    <footer class="footer-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-sm-5">
+                            <div class="logo mb-1">
+                                <img src="~/archite/architetemplate/img/Logo.png" alt="logo">
+                            </div>
+                            <p class="p text-white fw-500 line-height-5 mt-15">
+                                İç tasarım ajansımıza hoş geldiniz! Ekibimiz, zengin deneyimi ve yaratıcılığı ile mekanlarınıza değer katmaya hazır deneyimli tasarımcı ve dekoratörlerden oluşmaktadır.Yaşam alanlarınızı, çalışma mekanlarınızı güzelleştiren, işlevsellik ve estetiği birleştiren yaratıcı tasarımlarımızla, mekanlarınızın potansiyelini maksimize etmeyi amaçlıyoruz. İç tasarım ajansımıza hoş geldiniz!
+                            </p>
+                            <h2 class="fw-700 text-white mt-30 footer-email">@item.Email</h2>
                         </div>
-                        <p class="p text-white fw-500 line-height-5 mt-15">
-                            İç tasarım ajansımıza hoş geldiniz! Ekibimiz, zengin deneyimi ve yaratıcılığı ile mekanlarınıza değer katmaya hazır deneyimli tasarımcı ve dekoratörlerden oluşmaktadır.Yaşam alanlarınızı, çalışma mekanlarınızı güzelleştiren, işlevsellik ve estetiği birleştiren yaratıcı tasarımlarımızla, mekanlarınızın potansiyelini maksimize etmeyi amaçlıyoruz. İç tasarım ajansımıza hoş geldiniz!
+                        <div class="col-12 col-sm-2 offset-sm-1">
+                            <div class="mt-5 mt-sm-0">
+                                <ul class="d-flex flex-column gap-4">
+                                    <li>
+                                        <a class="fw-500 text-uppercase" href="/Default/Index/">Ana Sayfa</a>
+                                    </li>
+                                    <li><a class="fw-500 text-uppercase" href="/About/Index/">Hakkımızda</a></li>
+                                    <li>
+                                        <a class="fw-500 text-uppercase" href="/Service/Index/">Hizmetlerimiz</a>
+                                    </li>
+                                    <li>
+                                        <a class="fw-500 text-uppercase" href="/Portfolio/Index/">Projelerimiz</a>
+                                    </li>
+                                    <li><a class="fw-500 text-uppercase" href="/Team/Index/">Takımımız</a></li>
+                                    <li><a class="fw-500 text-uppercase" href="/Blog/Index/">Blog</a></li>
+                                    <li>
+                                        <a class="fw-500 text-uppercase" href="/Contact/Index/">İletişim</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <div class="d-flex align-items-start mb-30 mt-5 mt-sm-0">
+                                <i class="fa-solid fa-location-dot brand-text d-inline-block mr-10 mt-2"></i>
+                                <h6 class="h6 fw-400 line-height-4 footer-address">
+                                    @item.Address
+                                </h6>
+                            </div>
+                            <div class="d-flex align-items-start mb-30">
+                                <i class="fa-solid fa-phone-volume brand-text d-inline-block mr-10 mt-2"></i>
+                                <h6 class="h6 fw-400 line-height-4 footer-address">
+                                    @item.PhoneNumber
+                                </h6>
+                            </div>
+                            <div class="d-flex align-items-start mb-30">
+                                <i class="fa-solid fa-phone-volume brand-text d-inline-block mr-10 mt-2"></i>
+                                <h6 class="h6 fw-400 line-height-4 footer-address">
+                                    @item.CompanyNumber
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-100 d-flex justify-content-between align-items-center flex-column flex-xl-row">
+                        <div class="footer-one-social-container">
+                            <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="@item.FacebookLink">
+                                <span class="z-1 position-relative">Facebook</span>
+                            </a>
+                            <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="@item.LinkedinLink">
+                                <span class="z-1 position-relative">LinkedIn</span>
+                            </a>
+                            <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="@item.InstagramLink">
+                                <span class="z-1 position-relative">Instagram</span>
+                            </a>
+                            <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="@item.TwitterLink">
+                                <span class="z-1 position-relative">Twitter</span>
+                            </a>
+                            <a class="btn dark-btn mb-4 mb-lg-0" href="@item.YoutubeLink">
+                                <span class="z-1 position-relative">Youtube</span>
+                            </a>
+                        </div>
+                        <p class="p fw-500 line-height-3 footer-copyright-text pt-4 pt-xl-0">
+                            Gelecek Vadisi | @DateTime.Now.Year, Tüm hakları saklıdır.
                         </p>
-                        <h2 class="fw-700 text-white mt-30 footer-email">test@email.com</h2>
                     </div>
-                    <div class="col-12 col-sm-2 offset-sm-1">
-                        <div class="mt-5 mt-sm-0">
-                            <ul class="d-flex flex-column gap-4">
-                                <li>
-                                <a class="fw-500 text-uppercase" href="/Default/Index/">Ana Sayfa</a>
-                                </li>
-                                <li><a class="fw-500 text-uppercase" href="/About/Index/">Hakkımızda</a></li>
-                                <li>
-                                    <a class="fw-500 text-uppercase" href="/Service/Index/">Hizmetlerimiz</a>
-                                </li>
-                                <li>
-                                    <a class="fw-500 text-uppercase" href="/Portfolio/Index/">Projelerimiz</a>
-                                </li>
-                                <li><a class="fw-500 text-uppercase" href="blog.html">Takımımız</a></li>
-                                <li><a class="fw-500 text-uppercase" href="blog.html">Blog</a></li>
-                                <li>
-                                    <a class="fw-500 text-uppercase" href="contact.html">İletişim</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-4">
-                        <div class="d-flex align-items-start mb-30 mt-5 mt-sm-0">
-                            <i class="fa-solid fa-location-dot brand-text d-inline-block mr-10 mt-2"></i>
-                            <h6 class="h6 fw-400 line-height-4 footer-address">
-                                901 N Pitt Str., Suite 170 Alexandria, NY, USA
-                            </h6>
-                        </div>
-                        <div class="d-flex align-items-start mb-30">
-                            <i class="fa-solid fa-phone-volume brand-text d-inline-block mr-10 mt-2"></i>
-                            <h6 class="h6 fw-400 line-height-4 footer-address">
-                                (406) 555-0120
-                            </h6>
-                        </div>
-                        <div class="d-flex align-items-start mb-30">
-                            <i class="fa-solid fa-phone-volume brand-text d-inline-block mr-10 mt-2"></i>
-                            <h6 class="h6 fw-400 line-height-4 footer-address">
-                                (406) 327-1246
-                            </h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-100 d-flex justify-content-between align-items-center flex-column flex-xl-row">
-                    <div class="footer-one-social-container">
-                        <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://facebook.com">
-                            <span class="z-1 position-relative">Facebook</span>
-                        </a>
-                        <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://linkedin.com">
-                            <span class="z-1 position-relative">LinkedIn</span>
-                        </a>
-                        <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://instagram.com">
-                            <span class="z-1 position-relative">Instagram</span>
-                        </a>
-                        <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://twitter.com">
-                            <span class="z-1 position-relative">Twitter</span>
-                        </a>
-                        <a class="btn dark-btn mb-4 mb-lg-0" href="https://dribble.com">
-                            <span class="z-1 position-relative">Dribble</span>
-                        </a>
-                    </div>
-                    <p class="p fw-500 line-height-3 footer-copyright-text pt-4 pt-xl-0">
-                        Gelecek Vadisi | @DateTime.Now.Year, Tüm hakları saklıdır.
-                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-<!-- end footer -->
+    </footer>
+    <!-- end footer -->
+
+}

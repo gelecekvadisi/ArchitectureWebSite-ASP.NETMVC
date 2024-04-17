@@ -1471,7 +1471,7 @@ ul {
 
 .banner-one {
     height: fit-content;
-    background-image: url(../img/bannerOneBg.jpg);
+    background-image: url(/archite/architetemplate/img/bannerOneBg.jpg);
     background-blend-mode: overlay;
     background-position: center;
     background-repeat: no-repeat;

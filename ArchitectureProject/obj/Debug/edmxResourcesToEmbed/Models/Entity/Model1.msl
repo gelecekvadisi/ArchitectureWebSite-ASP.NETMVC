@@ -109,6 +109,7 @@
     <EntitySetMapping Name="Team">
       <EntityTypeMapping TypeName="ArchitectureDbModel.Team">
         <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="ShortContent" ColumnName="ShortContent" />
           <ScalarProperty Name="TeamID" ColumnName="TeamID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Job" ColumnName="Job" />

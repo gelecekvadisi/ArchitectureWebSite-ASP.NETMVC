@@ -1,0 +1,111 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Portfolio>
+
+@{
+    ViewBag.Title = "PortfolioDetail";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    @Html.Action("InnerPage", "Service", new { title = item.Title })
+
+    <!-- start portfolio details -->
+    <section class="portfolio-details-contents section-padding-bottom section-padding-top-xl">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="portfolio-details-contents-wrapper">
+                        <div class="image-cont-four">
+                            <img src="@item.Image" class="img-fluid mb-100 portfolio-details-featured-image" alt="portfolio details image">
+                        </div>
+                        <div class="row gx-lg-5 section-padding-bottom">
+                            <div class="col-12 col-lg-6 pb-4 pb-lg-0">
+                                <h3 class="h3 anim-heading-title dark-text fw-700 line-height-3">
+                                    @item.Title
+                                </h3>
+                                <p class="p body-text fw-500 line-height-5 mt-50">
+                                    @item.Content
+                                </p>
+                            </div>
+                            <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+                                <div class="portfolio-details-contnts-right">
+                                    <h2 class="h2 text-uppercase fw-700 line-height-3 portfolio-text-stroke d-inline-block">
+                                        Proje Bilgileri
+                                    </h2>
+                                    <div class="mt-70">
+                                        <div class="mb-4">
+                                            <div class="row align-items-center">
+                                                <div class="col-6 col-sm-8">
+                                                    <h6 class="h6 fw-400 body-text line-height-3">
+                                                        Proje Tipi:
+                                                    </h6>
+                                                </div>
+                                                <div class="col-6 col-sm-4">
+                                                    <h6 class="h6 fw-700 dark-text line-height-3">
+                                                        @item.ProjectType
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-details-divider"></div>
+                                        <div class="mt-4">
+                                            <div class="row align-items-center">
+                                                <div class="col-6 col-sm-8">
+                                                    <h6 class="h6 fw-400 body-text line-height-3">
+                                                        Başlangıç Tarihi:
+                                                    </h6>
+                                                </div>
+                                                <div class="col-6 col-sm-4">
+                                                    <h6 class="h6 fw-700 dark-text line-height-3">
+                                                        @item.CustomerSupport
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-80">
+                                        <div class="mb-4">
+                                            <div class="row align-items-center">
+                                                <div class="col-6 col-sm-8">
+                                                    <h6 class="h6 fw-400 body-text line-height-3">
+                                                        Müşteri:
+                                                    </h6>
+                                                </div>
+                                                <div class="col-6 col-sm-4">
+                                                    <h6 class="h6 fw-700 dark-text line-height-3">
+                                                        @item.Clients
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-details-divider"></div>
+                                        <div class="mt-4">
+                                            <div class="row align-items-center">
+                                                <div class="col-6 col-sm-8">
+                                                    <h6 class="h6 fw-400 body-text line-height-3">
+                                                        Konum:
+                                                    </h6>
+                                                </div>
+                                                <div class="col-6 col-sm-4">
+                                                    <h6 class="h6 fw-700 dark-text line-height-3">
+                                                        @item.Location 
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end portfolio details -->
+}
+
+@* slogan banner *@
+@Html.Action("SloganBanner", "About")

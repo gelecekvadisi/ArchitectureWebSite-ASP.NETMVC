@@ -106,6 +106,7 @@
     <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="DateTeam" Type="DateTime" Precision="3" />
+    <Property Name="ShortContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Testimonials">
     <Key>

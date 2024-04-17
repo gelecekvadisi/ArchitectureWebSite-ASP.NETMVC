@@ -7,18 +7,23 @@ using System.Web.Mvc;
 
 namespace ArchitectureProject.Controllers
 {
-    public class ServiceController : Controller
-    {
-        ArchitectureDbEntities dbEntities = new ArchitectureDbEntities();
-        public ActionResult Index()
-        {
-            List<Services> values = dbEntities.Services.ToList();
-            return View(values);
-        }
-        public PartialViewResult InnerPage(string title)
-        {
-            ViewBag.innerTitle = title;
-            return PartialView();
-        }
-    }
+	public class ServiceController : Controller
+	{
+		ArchitectureDbEntities dbEntities = new ArchitectureDbEntities();
+		public ActionResult Index()
+		{
+			List<Services> values = dbEntities.Services.ToList();
+			return View(values);
+		}
+		public PartialViewResult InnerPage(string title)
+		{
+			ViewBag.innerTitle = title;
+			return PartialView();
+		}
+		public ActionResult ServiceDetail(int id)
+		{
+			List<Services> values = dbEntities.Services.ToList().Where(x => x.ServicesID == id).ToList();
+			return View(values);
+		}
+	}
 }
