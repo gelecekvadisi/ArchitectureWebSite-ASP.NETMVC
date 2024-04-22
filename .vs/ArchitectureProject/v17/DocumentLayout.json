@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\views\\analayout\\footerpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\views\\analayout\\footerpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\controllers\\analayoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\controllers\\analayoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\views\\about\\aaboutupdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\views\\about\\aaboutupdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\views\\shared\\_analayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\views\\shared\\_analayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\views\\about\\aaboutlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\views\\about\\aaboutlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AnaLayoutController.cs",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\AnaLayoutController.cs",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Controllers\\AnaLayoutController.cs",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\AnaLayoutController.cs",
-              "RelativeToolTip": "ArchitectureProject\\Controllers\\AnaLayoutController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBQAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T18:30:04.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_AnaLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Shared\\_AnaLayout.cshtml",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Views\\Shared\\_AnaLayout.cshtml",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Shared\\_AnaLayout.cshtml",
-              "RelativeToolTip": "ArchitectureProject\\Views\\Shared\\_AnaLayout.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAAYAAAA",
+              "Title": "AAboutUpdate.cshtml",
+              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\About\\AAboutUpdate.cshtml",
+              "RelativeDocumentMoniker": "ArchitectureProject\\Views\\About\\AAboutUpdate.cshtml",
+              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\About\\AAboutUpdate.cshtml",
+              "RelativeToolTip": "ArchitectureProject\\Views\\About\\AAboutUpdate.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-17T18:29:59.606Z",
+              "WhenOpened": "2024-04-22T18:37:48.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FooterPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\AnaLayout\\FooterPartial.cshtml",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Views\\AnaLayout\\FooterPartial.cshtml",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\AnaLayout\\FooterPartial.cshtml",
-              "RelativeToolTip": "ArchitectureProject\\Views\\AnaLayout\\FooterPartial.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAD3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-17T18:29:45.931Z",
+              "Title": "AboutController.cs",
+              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\AboutController.cs",
+              "RelativeDocumentMoniker": "ArchitectureProject\\Controllers\\AboutController.cs",
+              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\AboutController.cs",
+              "RelativeToolTip": "ArchitectureProject\\Controllers\\AboutController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA9wCsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T18:32:52.482Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DefaultController.cs",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\DefaultController.cs",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Controllers\\DefaultController.cs",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\DefaultController.cs",
-              "RelativeToolTip": "ArchitectureProject\\Controllers\\DefaultController.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAYwBkAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T18:27:24.916Z",
+              "DocumentIndex": 2,
+              "Title": "AAboutList.cshtml",
+              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\About\\AAboutList.cshtml",
+              "RelativeDocumentMoniker": "ArchitectureProject\\Views\\About\\AAboutList.cshtml",
+              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\About\\AAboutList.cshtml",
+              "RelativeToolTip": "ArchitectureProject\\Views\\About\\AAboutList.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T18:13:13.649Z",
               "EditorCaption": ""
             }
           ]
