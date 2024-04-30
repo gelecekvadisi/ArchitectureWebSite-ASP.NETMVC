@@ -134,6 +134,7 @@
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\DesignController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
@@ -3761,6 +3762,15 @@
     <Content Include="Views\AdminLayout\FooterPartial.cshtml" />
     <Content Include="Views\AdminLayout\ScriptPartial.cshtml" />
     <Content Include="Views\About\AAboutUpdate.cshtml" />
+    <Content Include="Views\Blog\ABlogList.cshtml" />
+    <Content Include="Views\Blog\ANewBlog.cshtml" />
+    <Content Include="Views\Blog\AUpdateBlog.cshtml" />
+    <Content Include="Views\Design\ADesignList.cshtml" />
+    <Content Include="Views\Design\ADesignUpdate.cshtml" />
+    <Content Include="Views\Contact\AContactList.cshtml" />
+    <Content Include="Views\Contact\AContactDetail.cshtml" />
+    <Content Include="Views\Portfolio\APortfolioList.cshtml" />
+    <Content Include="Views\Portfolio\APortfolioUpdate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="admin\Admin\dist\assets\libs\chartist\scss\settings\" />

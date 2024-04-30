@@ -1,0 +1,40 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Blog>
+
+@{
+    ViewBag.Title = "ABlogList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<a href="/Blog/ANewBlog/" class="btn btn-success mb-3">Yeni Blog Ekle</a>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-6 col-xl-3">
+
+            <!-- Simple card -->
+            <div class="card">
+                <img class="card-img-top img-fluid" src="@item.Image" alt="Card image cap" style="height:250px; object-fit:cover;">
+                <div class="card-body">
+                    <h4 class="card-title">@item.Title</h4>
+                    <p class="card-text">
+                        @if (item.Content.Length > 100)
+                        {
+                            @item.Content.Substring(0, 100);
+                        }
+                        else
+                        {
+                            @item.Content;
+                        }
+
+                    </p>
+                    <a href="/Blog/AUpdateBlog/@item.BlogID" class="btn btn-warning">Güncelle</a>
+                    <a href="/Blog/ADeleteBlog/@item.BlogID" class="btn btn-danger">Sil</a>
+                </div>
+            </div>
+
+        </div><!-- end col -->
+    }
+</div>

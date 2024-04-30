@@ -24,5 +24,22 @@ namespace ArchitectureProject.Controllers
 			db.SaveChanges();
 			return RedirectToAction("Index", "Default"); //farklı bir sayfaya yönlendirme işlemi
 		}
+		public ActionResult AContactList()
+		{
+			var values = db.Contact.OrderByDescending(x => x.DateContact).ToList();
+			return View(values);
+		}
+		public ActionResult AContactDetail(int id)
+		{
+			var contactInfo = db.Contact.ToList().Where(x => x.ContactID == id).ToList();
+			return View(contactInfo);
+		}
+		public ActionResult AContactDelete(int id)
+		{
+			var values = db.Contact.ToList().Find(x => x.ContactID == id);
+			db.Contact.Remove(values);
+			db.SaveChanges();
+			return RedirectToAction("AContactList");
+		}
 	}
 }

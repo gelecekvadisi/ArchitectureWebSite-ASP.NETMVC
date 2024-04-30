@@ -1,0 +1,42 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Portfolio>
+
+@{
+    ViewBag.Title = "APortfolioList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<a href="" class="btn btn-outline-success mb-3">Yeni Proje Ekle</a>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-6 col-xl-3">
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">@item.Title</h4>
+                    <h6 class="card-subtitle text-muted">@item.ProjectType</h6>
+                </div>
+                <img class="img-fluid" src="@item.Image" alt="Card image cap" style="height:250px; object-fit:cover;">
+                <div class="card-body">
+                    <p class="card-text">
+                        @if (item.Content.Length > 140)
+                        {
+                            @item.Content.Substring(0, 140)
+                        }
+                        else
+                        {
+                            @item.Content
+                        }
+
+                    </p>
+                    <a href="/Portfolio/APortfolioUpdate/@item.PortfolioID" class="btn btn-outline-warning">Güncelle</a>
+                    <a href="#" class="btn btn-soft-danger">Sil</a>
+                </div>
+            </div>
+
+        </div><!-- end col -->
+    }
+</div>

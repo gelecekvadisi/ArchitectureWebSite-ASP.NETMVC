@@ -20,5 +20,30 @@ namespace ArchitectureProject.Controllers
 			List<Portfolio> values = dbEntities.Portfolio.ToList().Where(x => x.PortfolioID == id).ToList();
 			return View(values);
 		}
+		public ActionResult APortfolioList()
+		{
+			var portfolioList = dbEntities.Portfolio.OrderByDescending(Z => Z.DatePortfolio).ToList();
+			return View(portfolioList);
+		}
+		[HttpGet]
+		public ActionResult APortfolioUpdate(int id)
+		{
+			var values = dbEntities.Portfolio.ToList().Find(x => x.PortfolioID == id);
+			return View(values);
+		}
+		[HttpPost]
+		public ActionResult APortfolioUpdate(Portfolio model)
+		{
+			var values = dbEntities.Portfolio.ToList().Find(x => x.PortfolioID == model.PortfolioID);
+			values.Title = model.Title;
+			values.Image = model.Image;
+			values.CustomerSupport = model.CustomerSupport;
+			values.ProjectType = model.ProjectType;
+			values.Clients = model.Clients;
+			values.Location = model.Location;
+			values.Content = model.Content;
+			dbEntities.SaveChanges();
+			return RedirectToAction("APortfolioList");
+		}
 	}
 }
