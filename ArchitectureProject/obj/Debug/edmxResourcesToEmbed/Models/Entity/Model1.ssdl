@@ -23,6 +23,7 @@
     <Property Name="DateBlog" Type="datetime" />
     <Property Name="Image" Type="nvarchar" MaxLength="100" />
     <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Status" Type="bit" />
   </EntityType>
   <EntityType Name="Contact">
     <Key>
@@ -33,6 +34,7 @@
     <Property Name="Email" Type="nvarchar" MaxLength="50" />
     <Property Name="Message" Type="nvarchar(max)" />
     <Property Name="DateContact" Type="datetime" />
+    <Property Name="Status" Type="bit" />
   </EntityType>
   <EntityType Name="DesignAgency">
     <Key>
@@ -59,6 +61,7 @@
     <Property Name="Location" Type="nvarchar" MaxLength="100" />
     <Property Name="Content" Type="nvarchar(max)" />
     <Property Name="DatePortfolio" Type="datetime" />
+    <Property Name="Status" Type="bit" />
   </EntityType>
   <EntityType Name="Services">
     <Key>
@@ -72,6 +75,7 @@
     <Property Name="Image" Type="nvarchar" MaxLength="100" />
     <Property Name="Content" Type="nvarchar(max)" />
     <Property Name="DateService" Type="datetime" />
+    <Property Name="Status" Type="bit" />
   </EntityType>
   <EntityType Name="SiteSettings">
     <Key>
@@ -104,6 +108,7 @@
     <Property Name="StatisticID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Data" Type="int" />
     <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
   </EntityType>
   <EntityType Name="Team">
     <Key>
@@ -115,6 +120,7 @@
     <Property Name="Image" Type="nvarchar" MaxLength="100" />
     <Property Name="DateTeam" Type="datetime" />
     <Property Name="ShortContent" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="bit" />
   </EntityType>
   <EntityType Name="Testimonials">
     <Key>
@@ -125,6 +131,7 @@
     <Property Name="Location" Type="nvarchar" MaxLength="100" />
     <Property Name="Name" Type="nvarchar" MaxLength="100" />
     <Property Name="DateTestimonial" Type="datetime" />
+    <Property Name="Status" Type="bit" />
   </EntityType>
   <EntityContainer Name="ArchitectureDbModelStoreContainer">
     <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />

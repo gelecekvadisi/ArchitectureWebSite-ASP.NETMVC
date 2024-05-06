@@ -12,12 +12,17 @@ namespace ArchitectureProject.Controllers
 		ArchitectureDbEntities dbEntities = new ArchitectureDbEntities();
 		public ActionResult Index()
 		{
-			List<Team> values = dbEntities.Team.ToList();
+			List<Team> values = dbEntities.Team.OrderByDescending(x=>x.DateTeam).Where(z=>z.Status == true).ToList();
 			return View(values);
 		}
 		public ActionResult TeamDetail(int id)
 		{
 			var values = dbEntities.Team.ToList().Where(x => x.TeamID == id).ToList();
+			return View(values);
+		}
+		public ActionResult ATeamList()
+		{
+			var values = dbEntities.Team.OrderByDescending(z => z.DateTeam).ToList();
 			return View(values);
 		}
 	}

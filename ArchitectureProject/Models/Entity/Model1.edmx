@@ -28,6 +28,7 @@
           <Property Name="DateBlog" Type="datetime" />
           <Property Name="Image" Type="nvarchar" MaxLength="100" />
           <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="Contact">
           <Key>
@@ -38,6 +39,7 @@
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
           <Property Name="Message" Type="nvarchar(max)" />
           <Property Name="DateContact" Type="datetime" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="DesignAgency">
           <Key>
@@ -64,6 +66,7 @@
           <Property Name="Location" Type="nvarchar" MaxLength="100" />
           <Property Name="Content" Type="nvarchar(max)" />
           <Property Name="DatePortfolio" Type="datetime" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="Services">
           <Key>
@@ -77,6 +80,7 @@
           <Property Name="Image" Type="nvarchar" MaxLength="100" />
           <Property Name="Content" Type="nvarchar(max)" />
           <Property Name="DateService" Type="datetime" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="SiteSettings">
           <Key>
@@ -109,6 +113,7 @@
           <Property Name="StatisticID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Data" Type="int" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="Team">
           <Key>
@@ -120,6 +125,7 @@
           <Property Name="Image" Type="nvarchar" MaxLength="100" />
           <Property Name="DateTeam" Type="datetime" />
           <Property Name="ShortContent" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="Testimonials">
           <Key>
@@ -130,6 +136,7 @@
           <Property Name="Location" Type="nvarchar" MaxLength="100" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" />
           <Property Name="DateTestimonial" Type="datetime" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityContainer Name="ArchitectureDbModelStoreContainer">
           <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
@@ -171,6 +178,7 @@
           <Property Name="DateBlog" Type="DateTime" Precision="3" />
           <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
         <EntityType Name="Contact">
           <Key>
@@ -181,6 +189,7 @@
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="DateContact" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
         <EntityType Name="DesignAgency">
           <Key>
@@ -207,6 +216,7 @@
           <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="DatePortfolio" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
         <EntityType Name="Services">
           <Key>
@@ -220,6 +230,7 @@
           <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="DateService" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
         <EntityType Name="SiteSettings">
           <Key>
@@ -244,6 +255,7 @@
           <Property Name="StatisticID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Data" Type="Int32" />
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
         <EntityType Name="Team">
           <Key>
@@ -255,6 +267,7 @@
           <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DateTeam" Type="DateTime" Precision="3" />
           <Property Name="ShortContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
         <EntityType Name="Testimonials">
           <Key>
@@ -265,6 +278,7 @@
           <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DateTestimonial" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
         <EntityContainer Name="ArchitectureDbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="About" EntityType="Self.About" />
@@ -310,6 +324,7 @@
           <EntitySetMapping Name="Blog">
             <EntityTypeMapping TypeName="ArchitectureDbModel.Blog">
               <MappingFragment StoreEntitySet="Blog">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="BlogID" ColumnName="BlogID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Author" ColumnName="Author" />
@@ -322,6 +337,7 @@
           <EntitySetMapping Name="Contact">
             <EntityTypeMapping TypeName="ArchitectureDbModel.Contact">
               <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="ContactID" ColumnName="ContactID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
@@ -346,6 +362,7 @@
           <EntitySetMapping Name="Portfolio">
             <EntityTypeMapping TypeName="ArchitectureDbModel.Portfolio">
               <MappingFragment StoreEntitySet="Portfolio">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="PortfolioID" ColumnName="PortfolioID" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -361,6 +378,7 @@
           <EntitySetMapping Name="Services">
             <EntityTypeMapping TypeName="ArchitectureDbModel.Services">
               <MappingFragment StoreEntitySet="Services">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="ServicesID" ColumnName="ServicesID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="ShortContent" ColumnName="ShortContent" />
@@ -392,6 +410,7 @@
           <EntitySetMapping Name="Statistic">
             <EntityTypeMapping TypeName="ArchitectureDbModel.Statistic">
               <MappingFragment StoreEntitySet="Statistic">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="StatisticID" ColumnName="StatisticID" />
                 <ScalarProperty Name="Data" ColumnName="Data" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -401,6 +420,7 @@
           <EntitySetMapping Name="Team">
             <EntityTypeMapping TypeName="ArchitectureDbModel.Team">
               <MappingFragment StoreEntitySet="Team">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="ShortContent" ColumnName="ShortContent" />
                 <ScalarProperty Name="TeamID" ColumnName="TeamID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -413,6 +433,7 @@
           <EntitySetMapping Name="Testimonials">
             <EntityTypeMapping TypeName="ArchitectureDbModel.Testimonials">
               <MappingFragment StoreEntitySet="Testimonials">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="TestimonialsID" ColumnName="TestimonialsID" />
                 <ScalarProperty Name="Comment" ColumnName="Comment" />
                 <ScalarProperty Name="Location" ColumnName="Location" />

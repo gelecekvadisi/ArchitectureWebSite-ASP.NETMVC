@@ -22,5 +22,6 @@ namespace ArchitectureProject.Models.Entity
         public string Image { get; set; }
         public string Content { get; set; }
         public Nullable<System.DateTime> DateService { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

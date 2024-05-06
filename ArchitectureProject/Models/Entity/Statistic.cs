@@ -17,5 +17,6 @@ namespace ArchitectureProject.Models.Entity
         public int StatisticID { get; set; }
         public Nullable<int> Data { get; set; }
         public string Title { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

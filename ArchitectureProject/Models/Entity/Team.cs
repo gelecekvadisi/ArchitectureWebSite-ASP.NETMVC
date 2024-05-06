@@ -20,5 +20,6 @@ namespace ArchitectureProject.Models.Entity
         public string Image { get; set; }
         public Nullable<System.DateTime> DateTeam { get; set; }
         public string ShortContent { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

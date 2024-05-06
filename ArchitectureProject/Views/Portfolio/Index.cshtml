@@ -26,7 +26,7 @@
                                         <img src="@item.Image" class="img-fluid img-no-hover-effect" alt="blog image">
                                     </div>
                                     <p class="p body-text fw-500 line-height-5 pt-35">
-                                        @item.CustomerSupport
+                                        @(((DateTime)item.DatePortfolio).ToString("dd MMMM yyyy"))
                                     </p>
                                     <h5 class="mt-10">
                                         <a class="blog-archieve-card-title dark-text fw-700 line-height-3" href="/Portfolio/PortfolioDetail/@item.PortfolioID">

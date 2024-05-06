@@ -32,6 +32,16 @@
                     </p>
                     <a href="/Blog/AUpdateBlog/@item.BlogID" class="btn btn-warning">Güncelle</a>
                     <a href="/Blog/ADeleteBlog/@item.BlogID" class="btn btn-danger">Sil</a>
+
+                    @if (item.Status == true)
+                    {
+                        <a href="/Blog/AStatusChangeBlog/@item.BlogID" class="btn btn-outline-danger">Yayından Kaldır</a>
+                    }
+                    else
+                    {
+                        <a href="/Blog/AStatusChangeBlog/@item.BlogID" class="btn btn-outline-success">Yayına Al</a>
+                    }
+
                 </div>
             </div>
 

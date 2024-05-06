@@ -18,6 +18,7 @@
     <EntitySetMapping Name="Blog">
       <EntityTypeMapping TypeName="ArchitectureDbModel.Blog">
         <MappingFragment StoreEntitySet="Blog">
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="BlogID" ColumnName="BlogID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Author" ColumnName="Author" />
@@ -30,6 +31,7 @@
     <EntitySetMapping Name="Contact">
       <EntityTypeMapping TypeName="ArchitectureDbModel.Contact">
         <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="ContactID" ColumnName="ContactID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Email" ColumnName="Email" />
@@ -54,6 +56,7 @@
     <EntitySetMapping Name="Portfolio">
       <EntityTypeMapping TypeName="ArchitectureDbModel.Portfolio">
         <MappingFragment StoreEntitySet="Portfolio">
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="PortfolioID" ColumnName="PortfolioID" />
           <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="Title" ColumnName="Title" />
@@ -69,6 +72,7 @@
     <EntitySetMapping Name="Services">
       <EntityTypeMapping TypeName="ArchitectureDbModel.Services">
         <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="ServicesID" ColumnName="ServicesID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="ShortContent" ColumnName="ShortContent" />
@@ -100,6 +104,7 @@
     <EntitySetMapping Name="Statistic">
       <EntityTypeMapping TypeName="ArchitectureDbModel.Statistic">
         <MappingFragment StoreEntitySet="Statistic">
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="StatisticID" ColumnName="StatisticID" />
           <ScalarProperty Name="Data" ColumnName="Data" />
           <ScalarProperty Name="Title" ColumnName="Title" />
@@ -109,6 +114,7 @@
     <EntitySetMapping Name="Team">
       <EntityTypeMapping TypeName="ArchitectureDbModel.Team">
         <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="ShortContent" ColumnName="ShortContent" />
           <ScalarProperty Name="TeamID" ColumnName="TeamID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -121,6 +127,7 @@
     <EntitySetMapping Name="Testimonials">
       <EntityTypeMapping TypeName="ArchitectureDbModel.Testimonials">
         <MappingFragment StoreEntitySet="Testimonials">
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="TestimonialsID" ColumnName="TestimonialsID" />
           <ScalarProperty Name="Comment" ColumnName="Comment" />
           <ScalarProperty Name="Location" ColumnName="Location" />

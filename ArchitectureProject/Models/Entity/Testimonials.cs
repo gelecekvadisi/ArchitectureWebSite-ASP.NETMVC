@@ -19,5 +19,6 @@ namespace ArchitectureProject.Models.Entity
         public string Location { get; set; }
         public string Name { get; set; }
         public Nullable<System.DateTime> DateTestimonial { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

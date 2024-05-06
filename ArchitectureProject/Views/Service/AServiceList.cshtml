@@ -1,0 +1,58 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Services>
+
+@{
+    ViewBag.Title = "AServiceList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="col-12">
+        <h4 class="mt-3 mb-3">Hizmetlerimiz</h4>
+        <a href="/Service/ANewService/" class="btn btn-outline-success mb-3">Yeni Hizmet Ekle</a>
+        <div class="card-group">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 col-xl-3">
+                    <div class="card mb-4 mr-5">
+                        <img class="card-img-top img-fluid" src="@item.Image" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">@item.Title</h4>
+                            <p class="card-text">
+                                @if (item.Content.Length > 150)
+                                {
+                                    @item.Content.Substring(0, 150);
+                                }
+                                else
+                                {
+                                    @item.Content;
+                                }
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    @(((DateTime)item.DateService).ToString("dd MMMM yyyy"))
+                                </small>
+
+                            </p>
+                            <a href="/Service/AUpdateService/@item.ServicesID" class="btn btn-warning">Güncelle</a>
+                            <a href="/Service/ADeleteService/@item.ServicesID" class="btn btn-danger">Sil</a>
+
+                            @if (item.Status == true)
+                            {
+                                <a href="/Service/AStatusChangeService/@item.ServicesID" class="btn btn-outline-danger">Yayından Kaldır</a>
+                            }
+                            else
+                            {
+                                <a href="/Service/AStatusChangeService/@item.ServicesID" class="btn btn-outline-success">Yayına Al</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- end row -->

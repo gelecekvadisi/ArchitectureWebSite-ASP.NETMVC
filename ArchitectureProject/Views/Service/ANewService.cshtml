@@ -1,0 +1,68 @@
+﻿
+@model ArchitectureProject.Models.Entity.Services
+
+@{
+    ViewBag.Title = "ANewService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+
+            <h4 class="mb-3 header-title">Hizmet Ekleme</h4>
+
+            <form class="form-horizontal" method="post">
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-4 col-xl-3 col-form-label">Başlık</label>
+                    <div class="col-8 col-xl-9">
+                        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-4 col-xl-3 col-form-label">Kısa Yazı</label>
+                    <div class="col-8 col-xl-9">
+                        @Html.TextAreaFor(x => x.ShortContent, 3, 1, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-4 col-xl-3 col-form-label">Çalışma Süresi</label>
+                    <div class="col-8 col-xl-9">
+                        @Html.TextBoxFor(x => x.WeTakeTime, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-4 col-xl-3 col-form-label">Toplam Süre</label>
+                    <div class="col-8 col-xl-9">
+                        @Html.TextBoxFor(x => x.CustomerSupport, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-4 col-xl-3 col-form-label">Resim</label>
+                    <div class="col-8 col-xl-9">
+                        @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-4 col-xl-3 col-form-label">İçerik</label>
+                    <div class="col-8 col-xl-9">
+                        @Html.TextAreaFor(x => x.Content, 3, 1, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="justify-content-end row">
+                    <div class="col-8 col-xl-9">
+                        <button type="submit" class="btn btn-info waves-effect waves-light">Ekle</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>  <!-- end card-body -->
+    </div>  <!-- end card -->
+</div>  <!-- end col -->

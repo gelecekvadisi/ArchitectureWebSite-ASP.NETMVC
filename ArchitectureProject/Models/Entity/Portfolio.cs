@@ -23,5 +23,6 @@ namespace ArchitectureProject.Models.Entity
         public string Location { get; set; }
         public string Content { get; set; }
         public Nullable<System.DateTime> DatePortfolio { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

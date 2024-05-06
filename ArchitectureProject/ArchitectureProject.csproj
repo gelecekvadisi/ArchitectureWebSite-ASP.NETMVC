@@ -138,6 +138,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\SiteSettingsController.cs" />
+    <Compile Include="Controllers\SliderController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -3771,6 +3773,15 @@
     <Content Include="Views\Contact\AContactDetail.cshtml" />
     <Content Include="Views\Portfolio\APortfolioList.cshtml" />
     <Content Include="Views\Portfolio\APortfolioUpdate.cshtml" />
+    <Content Include="Views\Portfolio\ANewPortfolio.cshtml" />
+    <Content Include="Views\Service\AServiceList.cshtml" />
+    <Content Include="Views\Service\ANewService.cshtml" />
+    <Content Include="Views\Service\AUpdateService.cshtml" />
+    <Content Include="Views\SiteSettings\ASiteSettingsList.cshtml" />
+    <Content Include="Views\SiteSettings\ASiteSettingsUpdate.cshtml" />
+    <Content Include="Views\Slider\ASliderList.cshtml" />
+    <Content Include="Views\Slider\ASliderUpdate.cshtml" />
+    <Content Include="Views\Team\ATeamList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="admin\Admin\dist\assets\libs\chartist\scss\settings\" />

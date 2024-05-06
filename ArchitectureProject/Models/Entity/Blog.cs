@@ -20,5 +20,6 @@ namespace ArchitectureProject.Models.Entity
         public Nullable<System.DateTime> DateBlog { get; set; }
         public string Image { get; set; }
         public string Content { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace ArchitectureProject.Controllers
 		ArchitectureDbEntities dbEntities = new ArchitectureDbEntities();
 		public ActionResult Index()
 		{
-			var values = dbEntities.Blog.OrderByDescending(x => x.DateBlog).ToList();
+			var values = dbEntities.Blog.OrderByDescending(x => x.DateBlog).Where(x => x.Status == true).ToList();
 			return View(values);
 		}
 		public ActionResult BlogDetail(int id)
@@ -64,6 +64,13 @@ namespace ArchitectureProject.Controllers
 			blogInfo.Content = blog.Content;
 			blogInfo.Image = blog.Image;
 			blogInfo.Title = blog.Title;
+			dbEntities.SaveChanges();
+			return RedirectToAction("ABlogList");
+		}
+		public ActionResult AStatusChangeBlog(int id)
+		{
+			var blogInfo = dbEntities.Blog.ToList().Find(x => x.BlogID == id);
+			blogInfo.Status = !blogInfo.Status;
 			dbEntities.SaveChanges();
 			return RedirectToAction("ABlogList");
 		}

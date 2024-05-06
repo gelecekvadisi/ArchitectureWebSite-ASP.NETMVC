@@ -19,5 +19,6 @@ namespace ArchitectureProject.Models.Entity
         public string Email { get; set; }
         public string Message { get; set; }
         public Nullable<System.DateTime> DateContact { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

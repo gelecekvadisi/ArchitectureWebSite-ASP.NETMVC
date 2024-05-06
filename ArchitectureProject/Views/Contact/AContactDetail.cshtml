@@ -35,7 +35,7 @@
                     <div class="row task-dates mb-0 mt-2">
                         <div class="col-lg-6">
                             <h5 class="font-600 m-b-5">Alınan Tarih</h5>
-                            <p> @item.DateContact <small class="text-muted"></small></p>
+                            <p> @(((DateTime)item.DateContact).ToString("dd MMMM yyyy")) <small class="text-muted"></small></p>
                         </div>
 
                         <div class="col-lg-6">
