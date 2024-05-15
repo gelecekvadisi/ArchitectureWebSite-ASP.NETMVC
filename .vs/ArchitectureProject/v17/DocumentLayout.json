@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\views\\team\\ateamlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\views\\team\\ateamlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\controllers\\slidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\controllers\\slidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\views\\slider\\asliderupdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\views\\slider\\asliderupdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\views\\slider\\asliderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\views\\slider\\asliderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\controllers\\sitesettingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\controllers\\sitesettingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|c:\\users\\emirgzc\\source\\repos\\architectureproject\\architectureproject\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{775CC46A-9D7C-4D16-B4F6-0DC6076AA9AB}|ArchitectureProject\\ArchitectureProject.csproj|solutionrelative:architectureproject\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,79 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ATeamList.cshtml",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Team\\ATeamList.cshtml",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Views\\Team\\ATeamList.cshtml",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Team\\ATeamList.cshtml",
-              "RelativeToolTip": "ArchitectureProject\\Views\\Team\\ATeamList.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-06T18:56:53.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TeamController.cs",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\TeamController.cs",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Controllers\\TeamController.cs",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\TeamController.cs",
-              "RelativeToolTip": "ArchitectureProject\\Controllers\\TeamController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAbAAAA",
+              "Title": "BlogController.cs",
+              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\BlogController.cs",
+              "RelativeDocumentMoniker": "ArchitectureProject\\Controllers\\BlogController.cs",
+              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\BlogController.cs",
+              "RelativeToolTip": "ArchitectureProject\\Controllers\\BlogController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAuwDEAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T18:55:34.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ASliderUpdate.cshtml",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Slider\\ASliderUpdate.cshtml",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Views\\Slider\\ASliderUpdate.cshtml",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Slider\\ASliderUpdate.cshtml",
-              "RelativeToolTip": "ArchitectureProject\\Views\\Slider\\ASliderUpdate.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-06T18:49:32.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ASliderList.cshtml",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Slider\\ASliderList.cshtml",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Views\\Slider\\ASliderList.cshtml",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Views\\Slider\\ASliderList.cshtml",
-              "RelativeToolTip": "ArchitectureProject\\Views\\Slider\\ASliderList.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-06T18:42:55.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SliderController.cs",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\SliderController.cs",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Controllers\\SliderController.cs",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\SliderController.cs",
-              "RelativeToolTip": "ArchitectureProject\\Controllers\\SliderController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T18:39:23.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SiteSettingsController.cs",
-              "DocumentMoniker": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\SiteSettingsController.cs",
-              "RelativeDocumentMoniker": "ArchitectureProject\\Controllers\\SiteSettingsController.cs",
-              "ToolTip": "C:\\Users\\emirgzc\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Controllers\\SiteSettingsController.cs",
-              "RelativeToolTip": "ArchitectureProject\\Controllers\\SiteSettingsController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCUAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T18:22:31.841Z",
+              "WhenOpened": "2024-05-14T15:57:39.281Z",
               "EditorCaption": ""
             }
           ]

@@ -10,12 +10,14 @@ namespace ArchitectureProject.Controllers
 	public class ContactController : Controller
 	{
 		ArchitectureDbEntities db = new ArchitectureDbEntities();
+		[AllowAnonymous]
 		[HttpGet] // sadece veri ya da sayfa göstermek için kullanılır
 		public ActionResult Index()
 		{
 			List<SiteSettings> values = db.SiteSettings.ToList();
 			return View(values);
 		}
+		[AllowAnonymous]
 		[HttpPost] // ekleme, çıkarma, güncelleme ve silme gibi işlemlerin yapıldığı yer yani aksiyonun alındığı yer
 		public ActionResult Index(Contact contact)
 		{

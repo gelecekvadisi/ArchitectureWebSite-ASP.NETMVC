@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\AnaLayoutController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
@@ -136,15 +137,21 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\DesignController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\SiteSettingsController.cs" />
     <Compile Include="Controllers\SliderController.cs" />
+    <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Controllers\TestimonialsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\About.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Admin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\Blog.cs">
@@ -279,6 +286,7 @@
     <Content Include="admin\Admin\dist\assets\images\small\img-3.jpg" />
     <Content Include="admin\Admin\dist\assets\images\small\img-4.jpg" />
     <Content Include="admin\Admin\dist\assets\images\users\profile.jpg" />
+    <Content Include="admin\Admin\dist\assets\images\users\testimonials.jpg" />
     <Content Include="admin\Admin\dist\assets\images\users\user-1.jpg" />
     <Content Include="admin\Admin\dist\assets\images\users\user-10.jpg" />
     <Content Include="admin\Admin\dist\assets\images\users\user-2.jpg" />
@@ -3782,6 +3790,18 @@
     <Content Include="Views\Slider\ASliderList.cshtml" />
     <Content Include="Views\Slider\ASliderUpdate.cshtml" />
     <Content Include="Views\Team\ATeamList.cshtml" />
+    <Content Include="Views\Statistic\AStatisticList.cshtml" />
+    <Content Include="Views\Statistic\ANewStatistic.cshtml" />
+    <Content Include="Views\Statistic\AUpdateStatistic.cshtml" />
+    <Content Include="Views\Team\ANewTeam.cshtml" />
+    <Content Include="Views\Team\AUpdateTeam.cshtml" />
+    <Content Include="Views\Testimonials\ATestimonialsList.cshtml" />
+    <Content Include="Views\Testimonials\ANewTestimonial.cshtml" />
+    <Content Include="Views\Testimonials\AUpdateTestimonial.cshtml" />
+    <Content Include="Views\Admin\AAdminList.cshtml" />
+    <Content Include="Views\Admin\ANewAdmin.cshtml" />
+    <Content Include="Views\Admin\AUpdateAdmin.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="admin\Admin\dist\assets\libs\chartist\scss\settings\" />

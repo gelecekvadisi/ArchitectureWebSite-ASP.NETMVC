@@ -7,7 +7,8 @@ using System.Web.Mvc;
 
 namespace ArchitectureProject.Controllers
 {
-    public class AnaLayoutController : Controller
+	[AllowAnonymous]
+	public class AnaLayoutController : Controller
     {
         ArchitectureDbEntities dbEntities = new ArchitectureDbEntities();
         public PartialViewResult HeadPartial()

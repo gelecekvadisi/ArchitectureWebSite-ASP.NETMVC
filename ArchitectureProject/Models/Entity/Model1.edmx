@@ -18,6 +18,15 @@
           <Property Name="BigImage" Type="nvarchar" MaxLength="100" />
           <Property Name="ShortImage" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="100" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
         <EntityType Name="Blog">
           <Key>
             <PropertyRef Name="BlogID" />
@@ -140,6 +149,7 @@
         </EntityType>
         <EntityContainer Name="ArchitectureDbModelStoreContainer">
           <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DesignAgency" EntityType="Self.DesignAgency" Schema="dbo" store:Type="Tables" />
@@ -292,6 +302,7 @@
           <EntitySet Name="Team" EntityType="Self.Team" />
           <EntitySet Name="Testimonials" EntityType="Self.Testimonials" />
           <EntitySet Name="Slider" EntityType="ArchitectureDbModel.Slider" />
+          <EntitySet Name="Admin" EntityType="ArchitectureDbModel.Admin" />
         </EntityContainer>
         <EntityType Name="Slider">
           <Key>
@@ -300,6 +311,15 @@
           <Property Name="SliderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BigTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -448,6 +468,16 @@
                 <ScalarProperty Name="Content" ColumnName="Content" />
                 <ScalarProperty Name="BigTitle" ColumnName="BigTitle" />
                 <ScalarProperty Name="SliderID" ColumnName="SliderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admin">
+            <EntityTypeMapping TypeName="ArchitectureDbModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,0 +1,38 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Statistic>
+
+@{
+    ViewBag.Title = "AStatisticList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<a href="/Statistic/ANewStatistic/" class="btn btn-success mb-3">Yeni Ekle</a>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-xl-2 col-md-6">
+            <div class="card">
+                <div class="card-body widget-user">
+                    <div class="text-center">
+                        <h2 class="fw-normal text-primary" data-plugin="counterup">@item.Data</h2>
+                        <h5>@item.Title</h5>
+                    </div>
+                    <a href="/Statistic/AUpdateStatistic/@item.StatisticID" class="btn btn-warning">Güncelle</a>
+                    <a href="/Statistic/ADeleteStatistic/@item.StatisticID" class="btn btn-danger">Sil</a>
+                    @if (item.Status == true)
+                    {
+
+                        <a href="/Statistic/AStatusChange/@item.StatisticID" class="btn btn-danger mt-1">Yayından Kaldır</a>
+                    }
+                    else
+                    {
+                        <a href="/Statistic/AStatusChange/@item.StatisticID" class="btn btn-success mt-1">Yayına Al</a>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

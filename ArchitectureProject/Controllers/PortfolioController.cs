@@ -10,11 +10,13 @@ namespace ArchitectureProject.Controllers
 	public class PortfolioController : Controller
 	{
 		ArchitectureDbEntities dbEntities = new ArchitectureDbEntities();
+		[AllowAnonymous]
 		public ActionResult Index()
 		{
 			var values = dbEntities.Portfolio.OrderByDescending(x => x.DatePortfolio).Where(x => x.Status == true).ToList();
 			return View(values);
 		}
+		[AllowAnonymous]
 		public ActionResult PortfolioDetail(int id)
 		{
 			List<Portfolio> values = dbEntities.Portfolio.ToList().Where(x => x.PortfolioID == id).ToList();

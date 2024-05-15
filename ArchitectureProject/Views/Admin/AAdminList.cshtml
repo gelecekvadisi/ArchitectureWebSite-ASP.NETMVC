@@ -1,0 +1,52 @@
+﻿
+@using ArchitectureProject.Models.Entity
+@model List<Admin>
+
+@{
+    ViewBag.Title = "AAdminList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int sayac = 0;
+}
+
+<a href="/Admin/ANewAdmin/" class="btn btn-success mb-3">Yeni Admin Ekle</a>
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="mt-0 header-title">Admin Sayfası</h4>
+            <p class="text-muted font-14 mb-3">
+                Bu sayfada admin bilgileri listelenmektedir.
+            </p>
+
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Kullanıcı Adı</th>
+                            <th>İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <th scope="row">@sayac</th>
+                                <td>@item.Username</td>
+                                <td>
+                                    <a href="/Admin/AUpdateAdmin/@item.AdminId" class="btn btn-warning">Güncelle</a>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

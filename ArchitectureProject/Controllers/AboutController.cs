@@ -10,10 +10,12 @@ namespace ArchitectureProject.Controllers
 	public class AboutController : Controller
 	{
 		ArchitectureDbEntities db = new ArchitectureDbEntities();
+		[AllowAnonymous]
 		public ActionResult Index()
 		{
 			return View();
 		}
+		[AllowAnonymous]
 		public PartialViewResult SloganBanner()
 		{
 			return PartialView();

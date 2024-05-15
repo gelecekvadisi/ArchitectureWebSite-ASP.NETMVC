@@ -13,6 +13,15 @@
     <Property Name="BigImage" Type="nvarchar" MaxLength="100" />
     <Property Name="ShortImage" Type="nvarchar" MaxLength="100" />
   </EntityType>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="AdminId" />
+    </Key>
+    <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="100" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
   <EntityType Name="Blog">
     <Key>
       <PropertyRef Name="BlogID" />
@@ -135,6 +144,7 @@
   </EntityType>
   <EntityContainer Name="ArchitectureDbModelStoreContainer">
     <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DesignAgency" EntityType="Self.DesignAgency" Schema="dbo" store:Type="Tables" />

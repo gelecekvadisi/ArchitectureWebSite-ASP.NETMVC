@@ -10,16 +10,19 @@ namespace ArchitectureProject.Controllers
 	public class BlogController : Controller
 	{
 		ArchitectureDbEntities dbEntities = new ArchitectureDbEntities();
+		[AllowAnonymous]
 		public ActionResult Index()
 		{
 			var values = dbEntities.Blog.OrderByDescending(x => x.DateBlog).Where(x => x.Status == true).ToList();
 			return View(values);
 		}
+		[AllowAnonymous]
 		public ActionResult BlogDetail(int id)
 		{
 			var values = dbEntities.Blog.ToList().Where(x => x.BlogID == id).ToList();
 			return View(values);
 		}
+		[AllowAnonymous]
 		public PartialViewResult BlogBottomSlider()
 		{
 			var values = dbEntities.Services.ToList();

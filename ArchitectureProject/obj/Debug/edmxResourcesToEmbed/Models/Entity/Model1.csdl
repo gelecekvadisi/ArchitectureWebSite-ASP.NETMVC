@@ -137,6 +137,7 @@
     <EntitySet Name="Team" EntityType="Self.Team" />
     <EntitySet Name="Testimonials" EntityType="Self.Testimonials" />
     <EntitySet Name="Slider" EntityType="ArchitectureDbModel.Slider" />
+    <EntitySet Name="Admin" EntityType="ArchitectureDbModel.Admin" />
   </EntityContainer>
   <EntityType Name="Slider">
     <Key>
@@ -145,5 +146,14 @@
     <Property Name="SliderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="BigTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="AdminId" />
+    </Key>
+    <Property Name="AdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Boolean" />
   </EntityType>
 </Schema>

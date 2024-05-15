@@ -11,16 +11,19 @@ namespace ArchitectureProject.Controllers
 	public class ServiceController : Controller
 	{
 		ArchitectureDbEntities dbEntities = new ArchitectureDbEntities();
+		[AllowAnonymous]
 		public ActionResult Index()
 		{
 			List<Services> values = dbEntities.Services.OrderByDescending(x => x.DateService).Where(z => z.Status == true).ToList();
 			return View(values);
 		}
+		[AllowAnonymous]
 		public PartialViewResult InnerPage(string title)
 		{
 			ViewBag.innerTitle = title;
 			return PartialView();
 		}
+		[AllowAnonymous]
 		public ActionResult ServiceDetail(int id)
 		{
 			List<Services> values = dbEntities.Services.ToList().Where(x => x.ServicesID == id).ToList();

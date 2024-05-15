@@ -36,5 +36,6 @@ namespace ArchitectureProject.Models.Entity
         public virtual DbSet<Team> Team { get; set; }
         public virtual DbSet<Testimonials> Testimonials { get; set; }
         public virtual DbSet<Slider> Slider { get; set; }
+        public virtual DbSet<Admin> Admin { get; set; }
     }
 }

@@ -1,0 +1,49 @@
+﻿
+@model ArchitectureProject.Models.Entity.Testimonials
+
+@{
+    ViewBag.Title = "AUpdateTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+
+            <h4 class="mb-3 header-title">Yorum Güncelleme</h4>
+
+            <form class="form-horizontal" method="post">
+
+                @Html.HiddenFor(x => x.TestimonialsID)
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-4 col-xl-3 col-form-label">Ad Soyad</label>
+                    <div class="col-8 col-xl-9">
+                        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-4 col-xl-3 col-form-label">Konum</label>
+                    <div class="col-8 col-xl-9">
+                        @Html.TextBoxFor(x => x.Location, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-4 col-xl-3 col-form-label">Yorum</label>
+                    <div class="col-8 col-xl-9">
+                        @Html.TextAreaFor(x => x.Comment, 5, 1, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="justify-content-end row">
+                    <div class="col-8 col-xl-9">
+                        <button type="submit" class="btn btn-info waves-effect waves-light">Güncelle</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>  <!-- end card-body -->
+    </div>  <!-- end card -->
+</div>  <!-- end col -->
